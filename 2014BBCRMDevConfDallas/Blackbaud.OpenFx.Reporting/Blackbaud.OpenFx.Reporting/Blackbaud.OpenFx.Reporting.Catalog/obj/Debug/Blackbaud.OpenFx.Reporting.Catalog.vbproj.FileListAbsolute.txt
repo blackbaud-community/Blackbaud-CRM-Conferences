@@ -23,3 +23,8 @@ C:\Users\RonFr\bin\Blackbaud.OpenFx.Reporting.Catalog.pdb
 C:\Users\RonFr\Documents\GitHub\Blackbaud-CRM\Conferences\2014BBCRMDevConfDallas\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting.Catalog\obj\Debug\Blackbaud.OpenFx.Reporting.Catalog.vbprojResolveAssemblyReference.cache
 C:\Users\RonFr\Documents\GitHub\Blackbaud-CRM\Conferences\2014BBCRMDevConfDallas\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting.Catalog\obj\Debug\Blackbaud.OpenFx.Reporting.Catalog.dll
 C:\Users\RonFr\Documents\GitHub\Blackbaud-CRM\Conferences\2014BBCRMDevConfDallas\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting.Catalog\obj\Debug\Blackbaud.OpenFx.Reporting.Catalog.pdb
+C:\Users\bin\Blackbaud.OpenFx.Reporting.Catalog.dll
+C:\Users\RonFr\Documents\GitHub\Blackbaud-CRM-Conferences\2014BBCRMDevConfDallas\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting.Catalog\obj\Debug\Blackbaud.OpenFx.Reporting.Catalog.vbprojResolveAssemblyReference.cache
+C:\Users\RonFr\Documents\GitHub\Blackbaud-CRM-Conferences\2014BBCRMDevConfDallas\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting.Catalog\obj\Debug\Blackbaud.OpenFx.Reporting.Catalog.dll
+C:\Users\RonFr\Documents\GitHub\Blackbaud-CRM-Conferences\2014BBCRMDevConfDallas\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting\Blackbaud.OpenFx.Reporting.Catalog\obj\Debug\Blackbaud.OpenFx.Reporting.Catalog.pdb
+C:\Users\bin\Blackbaud.OpenFx.Reporting.Catalog.pdb

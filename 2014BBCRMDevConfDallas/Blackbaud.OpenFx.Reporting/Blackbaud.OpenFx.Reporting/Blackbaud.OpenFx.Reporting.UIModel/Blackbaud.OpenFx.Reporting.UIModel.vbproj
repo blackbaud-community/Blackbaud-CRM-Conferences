@@ -96,10 +96,6 @@
       <DependentUpon>SustainedGivingParametersViewDataFormUIModel.vb</DependentUpon>
     </Compile>
     <Compile Include="SustainedGivingParametersViewDataFormUIModel.vb" />
-    <Compile Include="SustainedGivingSummaryViewDataFormUIModel.CodeGen.vb">
-      <DependentUpon>SustainedGivingSummaryViewDataFormUIModel.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SustainedGivingSummaryViewDataFormUIModel.vb" />
     <Compile Include="TopDonorsReportUIModel.CodeGen.vb">
       <DependentUpon>TopDonorsReportUIModel.vb</DependentUpon>
     </Compile>
@@ -116,13 +112,6 @@
     <Content Include="htmlforms\custom\blackbaud.openfx.reporting\TopDonorsReport.html" />
     <Content Include="TopDonorsReportUIModel.xml">
       <DependentUpon>TopDonorsReportUIModel.vb</DependentUpon>
-    </Content>
-    <None Include="..\Blackbaud.OpenFx.Reporting.Catalog\SustainedGivingDashboard\SustainedGivingSummary.ViewForm.xml">
-      <Link>LinkedSpecs\SustainedGivingSummary.ViewForm.xml</Link>
-    </None>
-    <Content Include="htmlforms\custom\blackbaud.openfx.reporting\SustainedGivingSummaryViewDataForm.html" />
-    <Content Include="SustainedGivingSummaryViewDataFormUIModel.xml">
-      <DependentUpon>SustainedGivingSummaryViewDataFormUIModel.vb</DependentUpon>
     </Content>
     <None Include="..\Blackbaud.OpenFx.Reporting.Catalog\SustainedGivingDashboard\SustainedGivingParameters.ViewForm.xml">
       <Link>LinkedSpecs\SustainedGivingParameters.ViewForm.xml</Link>
@@ -141,7 +130,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>xcopy Blackbaud.OpenFx.Reporting.UIModel.dll "C:\Dev\CRM_Integration\Blackbaud.AppFx.Server\Deploy\bin\Custom" /y
+    <PostBuildEvent>xcopy Blackbaud.OpenFx.Reporting.UIModel.dll "C:\Dev\CRM_Integration\Blackbaud.AppFx.Server\Deploy\bin\custom" /y
 
 "$(ProjectDir)postbuild.bat"</PostBuildEvent>
   </PropertyGroup>

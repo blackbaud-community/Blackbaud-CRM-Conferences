@@ -113,20 +113,16 @@
     <EmbeddedResource Include="SustainedGivingDashboard\SustainedGivingRevenue.Widget.xml" />
     <EmbeddedResource Include="SustainedGivingDashboard\SustainedGiving.NewDonors.Datalist.xml" />
     <EmbeddedResource Include="SustainedGivingDashboard\SustainedGiving.NewDonors.Widget.xml" />
-    <Content Include="SustainedGivingDashboard\SustainedGivingSummary.ViewForm.xml" />
-    <Content Include="SustainedGivingDashboard\SustainedGivingSummary.Widget.xml" />
     <EmbeddedResource Include="TopDonorsReport\TopDonorsReport.Package.xml" />
     <EmbeddedResource Include="TopDonorsReport\TopDonorsReport.Page.xml" />
     <EmbeddedResource Include="TopDonorsReport\TopDonorsReport.Task.xml" />
     <EmbeddedResource Include="TopDonorsReport\TopDonorsReport.Report.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SustainedGivingDashboard\SustainedGiving.ActiveDonors.Datalist.xml" />
     <Content Include="SustainedGivingDashboard\SustainedGivingParameters.ViewForm.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="SustainedGivingDashboard\SustainedGivingParameters.Widget.xml" />
-    <EmbeddedResource Include="SustainedGivingDashboard\SustainedGivingRevenue.Datalist.xml" />
     <EmbeddedResource Include="SustainedGivingDashboard\SustainedGiving.DelinquentDonors.Datalist.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>

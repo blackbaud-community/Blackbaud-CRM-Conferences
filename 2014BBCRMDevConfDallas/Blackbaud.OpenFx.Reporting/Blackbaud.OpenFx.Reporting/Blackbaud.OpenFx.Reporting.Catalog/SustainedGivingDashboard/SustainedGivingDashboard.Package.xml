@@ -59,8 +59,9 @@
 	<common:DependencyList>
         <common:Dependency CatalogAssembly="Blackbaud.OpenFx.Reporting.Catalog.dll" CatalogItem="Blackbaud.OpenFx.Reporting.Catalog.SustainedGiving.DelinquentDonors.Datalist.xml" />
         <common:Dependency CatalogAssembly="Blackbaud.OpenFx.Reporting.Catalog.dll" CatalogItem="Blackbaud.OpenFx.Reporting.Catalog.SustainedGiving.UnpaidInstallments.Datalist.xml" />
-        <common:Dependency CatalogAssembly="Blackbaud.OpenFx.Reporting.Catalog.dll" CatalogItem="Blackbaud.OpenFx.Reporting.Catalog.SustainedGivingParameters.ViewForm.xml" />
         <common:Dependency CatalogAssembly="Blackbaud.OpenFx.Reporting.Catalog.dll" CatalogItem="Blackbaud.OpenFx.Reporting.Catalog.SustainedGiving.UnpaidInstallments.Widget.xml" />
+        <common:Dependency CatalogAssembly="Blackbaud.OpenFx.Reporting.Catalog.dll" CatalogItem="Blackbaud.OpenFx.Reporting.Catalog.SustainedGivingParameters.ViewForm.xml" />
+        <common:Dependency CatalogAssembly="Blackbaud.OpenFx.Reporting.Catalog.dll" CatalogItem="Blackbaud.OpenFx.Reporting.Catalog.SustainedGivingParameters.Widget.xml" />
         <common:Dependency CatalogAssembly="Blackbaud.OpenFx.Reporting.Catalog.dll" CatalogItem="Blackbaud.OpenFx.Reporting.Catalog.SustainedGivingParameters.Widget.xml" />
         <common:Dependency CatalogAssembly="Blackbaud.OpenFx.Reporting.Catalog.dll" CatalogItem="Blackbaud.OpenFx.Reporting.Catalog.SustainedGiving.TopDonors.Datalist.xml" />
         <common:Dependency CatalogAssembly="Blackbaud.OpenFx.Reporting.Catalog.dll" CatalogItem="Blackbaud.OpenFx.Reporting.Catalog.SustainedGiving.TopDonors.Widget.xml" />
