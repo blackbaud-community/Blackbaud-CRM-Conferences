@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>..\..\..\..\..\..\..\..\bin\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\..\..\..\bin\</OutputPath>
     <DocumentationFile>
     </DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
@@ -104,6 +104,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SustainedGivingDashboard\SustainedGivingRevenue.Datalist.xml" />
     <EmbeddedResource Include="SustainedGivingDashboard\SustainedGiving.Upgrades.Datalist.xml" />
     <EmbeddedResource Include="SustainedGivingDashboard\SustainedGiving.Upgrades.Widget.xml" />
     <EmbeddedResource Include="SustainedGivingDashboard\SustainedGiving.RevenueChannel.Datalist.xml" />
@@ -119,10 +120,10 @@
     <EmbeddedResource Include="TopDonorsReport\TopDonorsReport.Report.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Content Include="SustainedGivingDashboard\SustainedGivingParameters.ViewForm.xml">
+    <EmbeddedResource Include="SustainedGivingDashboard\SustainedGivingParameters.ViewForm.xml">
       <SubType>Designer</SubType>
-    </Content>
-    <Content Include="SustainedGivingDashboard\SustainedGivingParameters.Widget.xml" />
+    </EmbeddedResource>
+    <EmbeddedResource Include="SustainedGivingDashboard\SustainedGivingParameters.Widget.xml" />
     <EmbeddedResource Include="SustainedGivingDashboard\SustainedGiving.DelinquentDonors.Datalist.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
