@@ -17,6 +17,7 @@ The repo contains code samples from the 2014 Blackbaud CRM Developers Conference
 - A series of List Builder [code samples](https://github.com/blackbaud-community/Blackbaud-CRM-Conferences/tree/master/2014BBCRMDevConfDallas/OttingerListBuilderDemo) that query the revenue fact table and constituent dimension to provide a fast, flexible report-like feature.
 
 ## Resources ##
+* [Blackbaud CRM SDK GitHub Pages](http://blackbaud-community.github.io/Blackbaud-CRM/) 
 * See the [Blackbaud CRM Read Me](https://github.com/blackbaud-community/Blackbaud-CRM/blob/master/README.md). 
 * [Search Lists](https://www.blackbaud.com/files/support/guides/infinitydevguide/infsdk-developer-help.htm#../Subsystems/tranfunc-developer-help/Content/InfinitySearchLists/cochSearchLists.htm) chapter within Developer Guides
 * [List Builder](https://www.blackbaud.com/files/support/guides/infinitydevguide/infsdk-developer-help.htm#../Subsystems/infquery-developer-help/Content/coNewFeatures2-94ListBuilder.htm) section within the Query chapter in the Developer Guides
