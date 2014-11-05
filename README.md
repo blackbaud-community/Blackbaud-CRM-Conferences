@@ -1,5 +1,5 @@
 ## What's Included ##
-
+The repo contains code samples from the 2014 Blackbaud CRM Developers Conference held in Dallas, Texas on March 10 and 11.  
 
 **Search List Using Data Warehouse Code Sample**
 
