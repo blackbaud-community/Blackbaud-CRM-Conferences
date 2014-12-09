@@ -26,8 +26,7 @@ The repo contains code samples from the 2014 Blackbaud CRM Developers Conference
 
 ##Contributing##
 
-If you would like to contribute your own code sample, please read the following resources:
-Thank you
-* [Blackbaud CRM Read Me](https://github.com/blackbaud-community/Blackbaud-CRM/blob/master/README.md)
-* [Contributing to the blackbaud-community](https://github.com/blackbaud-community/Blackbaud-CRM/blob/master/CONTRIBUTING.md)
+Third-party contributions are how we keep the code samples great. We want to keep it as easy as possible to contribute changes that show others how to do cool things with Blackbaud SDKs and APIs. There are a few guidelines that we need contributors to follow.
+
+For more information, see our [canonical contributing guide](https://github.com/bbBobbyEarl/Blackbaud-CRM/blob/master/CONTRIBUTING.md) in the Blackbaud CRM repo which provides detailed instructions, including signing the [Contributor License Agreement](http://developer.blackbaud.com/cla).
 
