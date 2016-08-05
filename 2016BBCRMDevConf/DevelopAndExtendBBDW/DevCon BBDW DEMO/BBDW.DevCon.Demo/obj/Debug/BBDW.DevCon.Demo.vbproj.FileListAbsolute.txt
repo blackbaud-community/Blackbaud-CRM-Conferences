@@ -1,0 +1,5 @@
+C:\Users\DLLReferences\CodeContracts\BBDW.DevCon.Demo.noReferenceAssembly
+C:\Users\DLLReferences\BBDW.DevCon.Demo.dll
+C:\Users\DLLReferences\BBDW.DevCon.Demo.pdb
+C:\Users\bradgl\Desktop\BBDW.ReportDB.Catalog\obj\Debug\BBDW.DevCon.Demo.dll
+C:\Users\bradgl\Desktop\BBDW.ReportDB.Catalog\obj\Debug\BBDW.DevCon.Demo.pdb

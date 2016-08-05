@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBConTests", "BBConTests.csproj", "{51AFCC0D-0A3B-4F97-AB42-F90A4F7C43F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9DDD5B2C-20FF-4F14-9630-099E6BB2DFC1}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51AFCC0D-0A3B-4F97-AB42-F90A4F7C43F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51AFCC0D-0A3B-4F97-AB42-F90A4F7C43F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51AFCC0D-0A3B-4F97-AB42-F90A4F7C43F8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{51AFCC0D-0A3B-4F97-AB42-F90A4F7C43F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51AFCC0D-0A3B-4F97-AB42-F90A4F7C43F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51AFCC0D-0A3B-4F97-AB42-F90A4F7C43F8}.Release|x64.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

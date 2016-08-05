@@ -1,0 +1,104 @@
+<QueryViewSpec
+  xmlns="bb_appfx_queryview"
+  xmlns:c="bb_appfx_commontypes"
+  ID="FB0DD0BF-5C97-4D60-A9BA-1B251455A96C"
+  Name="Constituent Revenue Summary (BBDW Ext)"
+  Description="A view defined for querying on constituent revenue summary from BBDW"
+  Author="Brad Gleich"
+  IsRoot="false"
+  PrimaryKeyField="CONSTITUENTSYSTEMID"
+  RecordType="Constituent"
+  c:SecurityUIFolder="BBDW Query"
+  MartKey="BBDW"
+  >
+
+
+  <ViewImplementation ViewName="USR_V_QUERY_BBDW_CONSTITUENTSUMMARYREVENUE_EXT" ViewSchema="BBDW">
+    <ViewSQL>
+      <![CDATA[
+select 
+  [CONSTITUENTDIMID],
+  [CONSTITUENTSYSTEMID],
+  [IDSETREGISTERSYSTEMID],
+  [GIVINGYEARS],
+  [LARGESTGIFTLINEITEMFACTID],
+  [SMALLESTGIFTDATE],
+  [LARGESTGIFTDATE],
+  [TOTALGIFTAMOUNT],
+  [LASTGIFTLINEITEMFACTID],
+  [LASTGIFTAMOUNT],
+  [FIRSTGIFTDATE],
+  [FIRSTGIFTLINEITEMFACTID],
+  [TOTALAPPLICATION],
+  [DISTINCTGIVINGYEARS],
+  [LARGESTGIFTAMOUNT],
+  [FIRSTGIFTAMOUNT],
+  [SMALLESTGIFTAMOUNT],
+  [AVERAGEGIFTAMOUNT],
+  [SMALLESTIFTLINEITEMFACTID],
+  [LASTGIFTDATE]
+from BBDW.[FACT_CONSTITUENTSUMMARYREVENUE_EXT]
+      ]]>
+    </ViewSQL>
+  </ViewImplementation>
+
+  <Output>
+    <OutputFields>
+      <OutputField Name="CONSTITUENTSYSTEMID" Caption="Constituent system ID" DataType="Guid" IsHidden="true"/>
+      <OutputField Name="CONSTITUENTDIMID" Caption="Constituent dimension ID" DataType="Integer" IsHidden="true"/>
+      <OutputField Name="IDSETREGISTERSYSTEMID" Caption="Selection Record" DataType="Guid">
+        <LookupInfo>
+          <SearchList ID="98D0070E-C4A7-495B-A438-2AC12DA79068" >
+            <FormFieldOverrides>
+              <c:FormFieldOverride FieldID="IDSETFORMAT" DefaultValueText="2" />
+            </FormFieldOverrides>
+          </SearchList>
+        </LookupInfo>
+      </OutputField>
+      <OutputField Name="GIVINGYEARS" Caption="Total Giving Years" Category="Constituent Summary" DataType="Date" />
+      <OutputField Name="LARGESTGIFTLINEITEMFACTID" Caption="Largest Gift Application" IsHidden="true" Category="Constituent Summary" DataType="Integer" />      
+      <OutputField Name="SMALLESTGIFTDATEDIMID" Caption="Smallest Gift Date Dim ID" Category="Constituent Summary" DataType="Integer" IsHidden="1" />
+      <OutputField Name="SMALLESTGIFTDATE" Caption="Smallest Gift Date" Category="Constituent Summary" DataType="Date" />      
+      <OutputField Name="LARGESTGIFTDATEDIMID" Caption="Largest Gift Date Dim ID" Category="Constituent Summary" DataType="Integer" IsHidden="1" />
+      <OutputField Name="LARGESTGIFTDATE" Caption="Largest Gift Date" Category="Constituent Summary" DataType="Date" />      
+      <OutputField Name="TOTALGIFTAMOUNT" Caption="Total Gift Amount" Category="Constituent Summary" DataType="Money" />
+      <OutputField Name="LASTGIFTLINEITEMFACTID" Caption="Last Gift Application" IsHidden="true" Category="Constituent Summary" DataType="Integer" />
+      <OutputField Name="LASTGIFTAMOUNT" Caption="Last Gift Amount" Category="Constituent Summary" DataType="Money" />      
+      <OutputField Name="FIRSTGIFTDATEDIMID" Caption="First Gift Date Dim ID" Category="Constituent Summary" DataType="Integer" IsHidden="1" />
+      <OutputField Name="FIRSTGIFTDATE" Caption="First Gift Date" Category="Constituent Summary" DataType="Date" />      
+      <OutputField Name="FIRSTGIFTLINEITEMFACTID" Caption="First Gift Application" IsHidden="true" Category="Constituent Summary" DataType="Integer" />
+      <OutputField Name="TOTALAPPLICATION" Caption="Total Number of Applications" Category="Constituent Summary" DataType="Integer" />
+      <OutputField Name="DISTINCTGIVINGYEARS" Caption="Distinct Giving Years" Category="Constituent Summary" DataType="Date" />
+      <OutputField Name="LARGESTGIFTAMOUNT" Caption="Largest Gift Amount" Category="Constituent Summary" DataType="Money" />
+      <OutputField Name="FIRSTGIFTAMOUNT" Caption="First Gift Amount" Category="Constituent Summary" DataType="Money" />
+      <OutputField Name="SMALLESTGIFTAMOUNT" Caption="Smallest Gift Amount" Category="Constituent Summary" DataType="Money" />
+      <OutputField Name="AVERAGEGIFTAMOUNT" Caption="Average Gift Amount" Category="Constituent Summary" DataType="Money" />
+      <OutputField Name="SMALLESTIFTLINEITEMFACTID" Caption="Smallest Gift Application" IsHidden="true" Category="Constituent Summary" DataType="Integer" />      
+      <OutputField Name="LASTGIFTDATEDIMID" Caption="Last Gift Date Dim ID" Category="Constituent Summary" DataType="Integer" IsHidden="1" />
+      <OutputField Name="LASTGIFTDATE" Caption="Last Gift Date" Category="Constituent Summary" DataType="Date" />
+    </OutputFields>
+  </Output>
+
+  <RelationshipOperations>
+    <AddToParentView ParentView="V_QUERY_BBDW_CONSTITUENT" Field="CONSTITUENTDIMID" ParentViewRelatedField="CONSTITUENTDIMID" PathAlias="Revenue Summary"/>
+    <AddToParentView ParentView="V_QUERY_BBDW_CONSTITUENT_NORELATIONSHIPS" Field="CONSTITUENTDIMID" ParentViewRelatedField="CONSTITUENTDIMID" PathAlias="Revenue Summary"/>
+    <AddToParentView ParentView="V_QUERY_BBDW_CONSTITUENT_NOSPOUSE" Field="CONSTITUENTDIMID" ParentViewRelatedField="CONSTITUENTDIMID" PathAlias="Revenue Summary"/>
+    <AddToParentView ParentView="V_QUERY_BBDW_CONSTITUENT_NORELATIONSHIPSNORECOGNITION" Field="CONSTITUENTDIMID" ParentViewRelatedField="CONSTITUENTDIMID" PathAlias="Revenue Summary"/>
+    <AddToParentView ParentView="V_QUERY_BBDW_CONSTITUENT_NOSPONSOR" Field="CONSTITUENTDIMID" ParentViewRelatedField="CONSTITUENTDIMID" PathAlias="Revenue Summary"/>
+    <AddToParentView ParentView="V_QUERY_BBDW_CONSTITUENT_NOPROSPECT" Field="CONSTITUENTDIMID" ParentViewRelatedField="CONSTITUENTDIMID" PathAlias="Revenue Summary"/>
+    <AddToParentView ParentView="V_QUERY_BBDW_CONSTITUENT_NOREVENUE" Field="CONSTITUENTDIMID" ParentViewRelatedField="CONSTITUENTDIMID" PathAlias="Revenue Summary"/>
+    <AddToParentView ParentView="V_QUERY_BBDW_CONSTITUENT_NORECOGNITION" Field="CONSTITUENTDIMID" ParentViewRelatedField="CONSTITUENTDIMID" PathAlias="Revenue Summary"/>
+
+    <AddRelatedView Field="LARGESTGIFTLINEITEMFACTID" RelatedView="V_QUERY_BBDW_REVENUEAPPLICATION" RelatedField="FINANCIALTRANSACTIONLINEITEMFACTID" PathAlias="Largest Gift Application" />
+    <AddRelatedView Field="LASTGIFTLINEITEMFACTID" RelatedView="V_QUERY_BBDW_REVENUEAPPLICATION" RelatedField="FINANCIALTRANSACTIONLINEITEMFACTID" PathAlias="Last Gift Application" />
+    <AddRelatedView Field="FIRSTGIFTLINEITEMFACTID" RelatedView="V_QUERY_BBDW_REVENUEAPPLICATION" RelatedField="FINANCIALTRANSACTIONLINEITEMFACTID" PathAlias="First Gift Application" />
+    <AddRelatedView Field="SMALLESTIFTLINEITEMFACTID" RelatedView="V_QUERY_BBDW_REVENUEAPPLICATION" RelatedField="FINANCIALTRANSACTIONLINEITEMFACTID" PathAlias="Smallest Gift Application" />
+
+    <AddRelatedView RelatedView="V_QUERY_BBDW_DATE" RelatedField="DATEDIMID" Field="SMALLESTGIFTDATEDIMID" PathAlias="Smallest Gift Date Details" Cardinality="OneToOptionalOne"/>
+    <AddRelatedView RelatedView="V_QUERY_BBDW_DATE" RelatedField="DATEDIMID" Field="LARGESTGIFTDATEDIMID" PathAlias="Largest Gift Date Details" Cardinality="OneToOptionalOne"/>
+    <AddRelatedView RelatedView="V_QUERY_BBDW_DATE" RelatedField="DATEDIMID" Field="FIRSTGIFTDATEDIMID" PathAlias="First Gift Date Details" Cardinality="OneToOptionalOne"/>
+    <AddRelatedView RelatedView="V_QUERY_BBDW_DATE" RelatedField="DATEDIMID" Field="LASTGIFTDATEDIMID" PathAlias="Last Gift Date Details" Cardinality="OneToOptionalOne"/>
+  </RelationshipOperations>
+  
+</QueryViewSpec>
+
