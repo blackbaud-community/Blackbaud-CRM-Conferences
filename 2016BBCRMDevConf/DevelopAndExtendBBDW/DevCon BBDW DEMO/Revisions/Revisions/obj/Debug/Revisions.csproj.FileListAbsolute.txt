@@ -1,0 +1,9 @@
+E:\BBEC\DEV\CRM_Integration\OLAP\BBDW\Deploy\Extend\Revisions\DBREV1000.XML
+E:\BBEC\DEV\CRM_Integration\OLAP\BBDW\Deploy\Extend\Revisions\Revisions.dll
+E:\BBEC\DEV\CRM_Integration\OLAP\BBDW\Deploy\Extend\Revisions\Revisions.pdb
+E:\BBEC\DEV\CRM_Integration_PROJECTS\Revisions\Revisions\obj\Debug\Revisions.csprojResolveAssemblyReference.cache
+E:\BBEC\DEV\CRM_Integration_PROJECTS\Revisions\Revisions\obj\Debug\Revisions.dll
+E:\BBEC\DEV\CRM_Integration_PROJECTS\Revisions\Revisions\obj\Debug\Revisions.pdb
+E:\BBEC\DEV\CRM_SP_DEV\OLAP\BBDW\Deploy\Extend\Revisions\DBREV1000.XML
+E:\BBEC\DEV\CRM_SP_DEV\OLAP\BBDW\Deploy\Extend\Revisions\Revisions.dll
+E:\BBEC\DEV\CRM_SP_DEV\OLAP\BBDW\Deploy\Extend\Revisions\Revisions.pdb

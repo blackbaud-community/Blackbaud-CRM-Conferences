@@ -1,0 +1,5 @@
+C:\Users\bradgl\Desktop\DevCon BBDW DEMO\Revisions\Revisions\bin\Release\Revisions.dll
+C:\Users\bradgl\Desktop\DevCon BBDW DEMO\Revisions\Revisions\bin\Release\Revisions.pdb
+C:\Users\bradgl\Desktop\DevCon BBDW DEMO\Revisions\Revisions\obj\Release\Revisions.dll
+C:\Users\bradgl\Desktop\DevCon BBDW DEMO\Revisions\Revisions\obj\Release\Revisions.pdb
+C:\Users\bradgl\Desktop\DevCon BBDW DEMO\Revisions\Revisions\obj\Release\Revisions.csprojResolveAssemblyReference.cache

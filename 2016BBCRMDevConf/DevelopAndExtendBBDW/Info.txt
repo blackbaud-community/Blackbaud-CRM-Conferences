@@ -1,0 +1,3 @@
+The DevCon BBDW DEMO folder contains on all the solutions used to create the extensions.
+
+The Extend folder holds the results of the solutions used for deploying the extensions into BBDW.

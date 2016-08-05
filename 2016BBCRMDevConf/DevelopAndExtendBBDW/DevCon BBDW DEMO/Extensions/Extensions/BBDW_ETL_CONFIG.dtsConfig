@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+  <!--
+	   This is the configuration file for the BBDW SSIS package suite
+	   Edit this values in this file that are specific to the deployment environment.
+	   Set an envrionment variable named BBDW_ETL_CONFIG_PATH to the path to this file.
+	-->
+  <DTSConfigurationHeading>
+    <DTSConfigurationFileInfo GeneratedBy="Blackbaud Product Development" />
+  </DTSConfigurationHeading>
+  <!-- The connection string for the Report database (datawarehouse) SQL Server database-->
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[BBETL_DB_CONN_DW].Properties[ConnectionString]" ValueType="String">
+    <ConfiguredValue>Provider=SQLNCLI11;Data Source=CHS6JASONPER03\MSSQLSERVER14;Integrated Security=SSPI;Initial Catalog=BBInfinity_CRM_SP_DEV_RPT_BBDW;Packet Size=32767</ConfiguredValue>
+  </Configuration>
+  <!-- The connection string for the Application SQL Server database-->
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[BBETL_DB_CONN_OLTP].Properties[ConnectionString]" ValueType="String">
+    <ConfiguredValue>Provider=SQLNCLI11;Data Source=CHS6JASONPER03\MSSQLSERVER14;Integrated Security=SSPI;Initial Catalog=BBInfinity_CRM_SP_DEV;Packet Size=32767</ConfiguredValue>
+  </Configuration>
+  <!-- The connection string for the Analysis Services OLAP server-->
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[BBETL_DB_CONN_OLAP].Properties[ConnectionString]" ValueType="String">
+    <ConfiguredValue>Data Source=CHS6JASONPER03\MSSQLSERVER14;Provider=MSOLAP;Integrated Security=SSPI;Impersonation Level=Impersonate;</ConfiguredValue>
+  </Configuration>
+  <!--The name of the UDM OLAP database-->
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::UDMDatabaseName].Properties[Value]" ValueType="String">
+    <ConfiguredValue>BBInfinity_CRM_SP_DEV_RPT_BBDW_UDM</ConfiguredValue>
+  </Configuration>
+  <!--The path to all of the package files.  Be sure to end with a trailing \ -->
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::ETLDeploymentFolder].Properties[Value]" ValueType="String">
+    <ConfiguredValue>C:\Program Files\Microsoft SQL Server\120\DTS\Packages\BBETL\BBInfinity_CRM_SP_DEV_RPT_BBDW\</ConfiguredValue>
+  </Configuration>
+  <!-- The csv file with the list of packages to execute and in what order.-->
+  <Configuration ConfiguredType="Property" Path="\Package.Variables[User::PackageListFile].Properties[Value]" ValueType="String">
+    <ConfiguredValue>BBDW_PackageList.txt</ConfiguredValue>
+  </Configuration>
+</DTSConfiguration>

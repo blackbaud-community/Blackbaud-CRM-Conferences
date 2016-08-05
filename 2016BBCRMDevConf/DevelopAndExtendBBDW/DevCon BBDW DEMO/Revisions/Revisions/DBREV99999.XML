@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<DBRevisions xmlns="bb_appfx_dbrevisions">
+  <DBRevision ID="1">
+    <Comment>Extended Reset ETL</Comment>
+  </DBRevision>
+
+  <DBRevision ID="5">
+    <ExecuteSql>
+      <![CDATA[	
+exec BBDW.[USP_DROPOBJECTIFEXISTS] 'BBDW','RESETETL_EXT';
+      ]]>
+    </ExecuteSql>
+  </DBRevision>
+
+  <DBRevision ID="10">
+    <ExecuteSql>
+      <![CDATA[	
+create procedure [BBDW].[RESETETL_EXT]
+as
+	set nocount on;
+	   
+	exec BBDW.[CREATE_OR_DROP_INDICES] 'BBDW', 'DIM_CONSTITUENT_EXT', 0, 0;  
+	truncate table BBDW.[DIM_CONSTITUENT_EXT]; 
+  
+	exec BBDW.[CREATE_OR_DROP_INDICES] 'BBDW', 'FACT_CONSTITUENTSUMMARYREVENUE_EXT', 0, 0;  
+	truncate table BBDW.[FACT_CONSTITUENTSUMMARYREVENUE_EXT];   
+  truncate table BBDW.[FACT_CONSTITUENTSUMMARYREVENUERANKS_STAGE_EXT]; 
+]]>
+    </ExecuteSql>
+  </DBRevision>
+
+</DBRevisions>

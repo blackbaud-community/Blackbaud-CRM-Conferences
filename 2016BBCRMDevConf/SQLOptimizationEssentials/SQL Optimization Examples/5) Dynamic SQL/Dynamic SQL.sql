@@ -1,0 +1,16 @@
+/*
+dbcc dropcleanbuffers;
+dbcc freeproccache;
+
+set statistics io on;
+set statistics time on;
+*/
+
+exec dbo.USP_TEST_NOTDYNAMICSQL @CONSTITUENTID = '4310B0DA-821E-463E-A616-14CFB79327A2'
+
+exec dbo.USP_TEST_DYNAMICSQL @CONSTITUENTID = '4310B0DA-821E-463E-A616-14CFB79327A2'
+
+
+exec dbo.USP_TEST_NOTDYNAMICSQL @STARTDATE = '6-1-2016', @ENDDATE = '6-7-2016'
+
+exec dbo.USP_TEST_DYNAMICSQL @STARTDATE = '6-1-2016', @ENDDATE = '6-7-2016'

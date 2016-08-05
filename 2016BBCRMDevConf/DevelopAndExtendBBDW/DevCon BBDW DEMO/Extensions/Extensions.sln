@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Extensions", "Extensions\Extensions.dtproj", "{0DDE3AF1-3EE2-4FEF-A612-270B5B7A3896}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DDE3AF1-3EE2-4FEF-A612-270B5B7A3896}.Development|Default.ActiveCfg = Development
+		{0DDE3AF1-3EE2-4FEF-A612-270B5B7A3896}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

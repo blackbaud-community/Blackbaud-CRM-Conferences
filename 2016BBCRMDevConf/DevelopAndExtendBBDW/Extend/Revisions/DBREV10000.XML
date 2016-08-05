@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<DBRevisions xmlns="bb_appfx_dbrevisions">
+  <DBRevision ID="1">
+    <Comment>Constituent Extenstion</Comment>
+  </DBRevision>
+
+  <DBRevision ID="100">
+    <ExecuteSql>
+      <![CDATA[
+exec BBDW.[USP_DROPOBJECTIFEXISTS] 'BBDW','DIM_CONSTITUENT_EXT';
+      ]]>
+    </ExecuteSql>
+  </DBRevision>
+
+  <DBRevision ID="105">
+    <ExecuteSql>
+      <![CDATA[	
+create table [BBDW].[DIM_CONSTITUENT_EXT] 
+(
+  [CONSTITUENTDIMID] int not null,
+  [CONSTITUENTSYSTEMID] uniqueidentifier not null,
+  [PRIMARYSALUTATION] nvarchar(700) not null,
+  [ISINCLUDED] bit not null,
+  [ETLCONTROLID] int not null,
+  [SOURCEDIMID] int not null 	
+);
+      ]]>
+    </ExecuteSql>
+  </DBRevision>
+
+  <DBRevision ID="110">
+    <ExecuteSql>
+      <![CDATA[	
+exec BBDW.USP_SCHEMA_TABLE_SETTABLECOMMENT 'DIM_CONSTITUENT_EXT', 'Constituent extension table';
+exec BBDW.USP_SCHEMA_TABLE_SETCOLUMNCOMMENT 'MS_Description', 'DIM_CONSTITUENT_EXT', 'CONSTITUENTDIMID','Reference key to the constituent dimension, derived from dbo.[CONSTITUENT].[ID]';
+exec BBDW.USP_SCHEMA_TABLE_SETCOLUMNCOMMENT 'MS_Description', 'DIM_CONSTITUENT_EXT', 'CONSTITUENTSYSTEMID','dbo.[CONSTITUENT].[ID]';
+exec BBDW.USP_SCHEMA_TABLE_SETCOLUMNCOMMENT 'MS_Description', 'DIM_CONSTITUENT_EXT', 'PRIMARYSALUTATION','Derived from dbo.[NAMEFORMAT].[FORMATTEDNAME]';
+exec BBDW.USP_SCHEMA_TABLE_SETCOLUMNCOMMENT 'MS_Description', 'DIM_CONSTITUENT_EXT', 'ISINCLUDED','Flag indicating when data should be included in results.';
+exec BBDW.USP_SCHEMA_TABLE_SETCOLUMNCOMMENT 'MS_Description', 'DIM_CONSTITUENT_EXT', 'ETLCONTROLID','ID generated through the ETL process.';
+exec BBDW.USP_SCHEMA_TABLE_SETCOLUMNCOMMENT 'MS_Description', 'DIM_CONSTITUENT_EXT', 'SOURCEDIMID','Source system used.';
+
+exec BBDW.[USP_SCHEMA_TABLE_SETCOLUMNCOMMENT] 'FK_REFERENCE', 'DIM_CONSTITUENT_EXT','CONSTITUENTDIMID', 'BBDW.[DIM_CONSTITUENT].[CONSTITUENTDIMID]';
+exec BBDW.[USP_SCHEMA_TABLE_SETCOLUMNCOMMENT] 'FK_REFERENCE', 'DIM_CONSTITUENT_EXT','SOURCEDIMID', 'BBDW.[DIM_SOURCE].[SOURCEDIMID]';
+
+exec BBDW.[USP_SCHEMA_TABLE_SETCOLUMNCOMMENT] 'INCLUDEINGRAIN', 'DIM_CONSTITUENT_EXT', 'CONSTITUENTSYSTEMID','1';
+      ]]>
+    </ExecuteSql>
+  </DBRevision>
+  
+<DBRevision ID="115">
+  <ExecuteSql>
+      <![CDATA[
+exec BBDW.[USP_DROPOBJECTIFEXISTS] 'BBDW','DIM_CONSTITUENT_EXT_STAGE';
+      ]]>
+    </ExecuteSql>
+ </DBRevision>
+
+  <DBRevision ID="120">
+    <ExecuteSql>
+      <![CDATA[	
+create table [BBDW].[DIM_CONSTITUENT_EXT_STAGE] 
+(
+  [CONSTITUENTSYSTEMID] uniqueidentifier not null,
+  [PRIMARYSALUTATION] nvarchar(700) null,
+  [ISINCLUDED] bit null,
+  [ETLCONTROLID] int null,
+  [SOURCEDIMID] int null 	
+);
+      ]]>
+    </ExecuteSql>
+  </DBRevision>
+
+  <DBRevision ID="125">
+    <ExecuteSql>
+      <![CDATA[	
+exec BBDW.USP_SCHEMA_TABLE_SETTABLECOMMENT 'DIM_CONSTITUENT_EXT_STAGE', 'Constituent extension stage table';
+exec BBDW.USP_SCHEMA_TABLE_SETCOLUMNCOMMENT 'MS_Description', 'DIM_CONSTITUENT_EXT_STAGE', 'CONSTITUENTSYSTEMID','dbo.[CONSTITUENT].[ID]';
+exec BBDW.USP_SCHEMA_TABLE_SETCOLUMNCOMMENT 'MS_Description', 'DIM_CONSTITUENT_EXT_STAGE', 'PRIMARYSALUTATION','Derived from dbo.[NAMEFORMAT].[FORMATTEDNAME]';
+exec BBDW.USP_SCHEMA_TABLE_SETCOLUMNCOMMENT 'MS_Description', 'DIM_CONSTITUENT_EXT_STAGE', 'ISINCLUDED','Flag indicating when data should be included in results.';
+exec BBDW.USP_SCHEMA_TABLE_SETCOLUMNCOMMENT 'MS_Description', 'DIM_CONSTITUENT_EXT_STAGE', 'ETLCONTROLID','ID generated through the ETL process.';
+exec BBDW.USP_SCHEMA_TABLE_SETCOLUMNCOMMENT 'MS_Description', 'DIM_CONSTITUENT_EXT_STAGE', 'SOURCEDIMID','Source system used.';
+      ]]>
+    </ExecuteSql>
+  </DBRevision>
+
+</DBRevisions>
