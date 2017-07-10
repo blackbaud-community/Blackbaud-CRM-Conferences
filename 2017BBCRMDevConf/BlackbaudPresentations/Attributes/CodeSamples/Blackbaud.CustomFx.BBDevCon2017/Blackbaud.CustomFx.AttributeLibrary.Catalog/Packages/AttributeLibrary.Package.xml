@@ -1,0 +1,16 @@
+﻿<PackageSpec 
+	xmlns="bb_appfx_package"
+	xmlns:c="bb_appfx_commontypes" 
+	ID="962578af-6c71-4487-bfa9-49579a7073cf" 
+	Name="Attribute Library"
+	Description="A package defining specs related to accessing attributes." 
+	Author="Blackbaud Professional Services"
+	>
+	
+	<DependencyList xmlns="bb_appfx_commontypes">
+		<Dependency CatalogAssembly="Blackbaud.CustomFx.AttributeLibrary.Catalog.dll" CatalogItem="Blackbaud.CustomFx.AttributeLibrary.Catalog.USR_USP_GETATTRIBUTEVALUEANDTRANSLATION.xml"/>
+		<Dependency CatalogAssembly="Blackbaud.CustomFx.AttributeLibrary.Catalog.dll" CatalogItem="Blackbaud.CustomFx.AttributeLibrary.Catalog.USR_USP_UPSERT_ATTRIBUTEVALUE.xml"/>
+		<Dependency CatalogAssembly="Blackbaud.CustomFx.AttributeLibrary.Catalog.dll" CatalogItem="Blackbaud.CustomFx.AttributeLibrary.Catalog.USR_USP_GETATTRIBUTEVALUESANDTRANSLATIONS.xml"/>
+	</DependencyList>
+
+</PackageSpec>

@@ -1,0 +1,37 @@
+[
+    {
+        "title": "bbui-angular guides",
+        "items": [
+            {
+                "name": "getting_started",
+                "url": "getting_started",
+                "title": "Getting Started With bbui-angular",
+                "description": "This introduction to bbui-angular explains how you can get started."
+            },
+            {
+                "name": "start_project",
+                "url": "start_project",
+                "title": "Start a Project",
+                "description": "Create a basic application with bbui-angular."
+            },
+            {
+                "name": "authentication",
+                "url": "authentication",
+                "title": "Authentication",
+                "description": "Log in to your app via Blackbaud CRM authentication."
+            },
+            {
+                "name": "create_record_page",
+                "url": "create_record_page",
+                "title": "Create a record page",
+                "description": "Create a page with some content from Blackbaud CRM."
+            },
+            {
+                "name": "navigation",
+                "url": "navigation",
+                "title": "Navigation",
+                "description": "Navigate around your single-page application."
+            }
+        ]
+    }
+]

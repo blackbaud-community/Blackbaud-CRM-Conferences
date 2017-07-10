@@ -1,0 +1,62 @@
+﻿<SQLStoredProcedureSpec
+	xmlns="bb_appfx_sqlstoredprocedure"
+	xmlns:c="bb_appfx_commontypes" 
+	ID="445c92ef-29b9-4d52-981e-0377f6b07ae3"
+	Name="USR_USP_GETATTRIBUTEVALUEANDTRANSLATION"
+	Description="Retrieves the value and translation (if applicable) of an attribute given the name and record type name.  Value and translation will be returned as nvarchar(max)."
+	Author="Blackbaud Professional Services"
+	SPName="USR_USP_GETATTRIBUTEVALUEANDTRANSLATION"
+    GrantServiceRolePermission="true"
+	>
+
+	<CreateProcedureSQL>
+		<![CDATA[
+create procedure dbo.USR_USP_GETATTRIBUTEVALUEANDTRANSLATION
+(
+     @RECORDTYPE_NAME nvarchar(200)    --------- = 'Constituent'
+    ,@ATTRIBUTE_NAME nvarchar(200)-------------- = 'Demo1'
+    ,@ID uniqueidentifier----------------------- = 'CBA65218-4379-4294-A440-ADFD96F8FB60'
+    ,@ATTRIBUTE_VALUE nvarchar(max) = null output
+    ,@ATTRIBUTE_VALUE_XLATED nvarchar(max) = null  output 
+)
+as
+begin
+    declare @ATTRIBUTETABLENAME nvarchar(300)
+    declare @ATTRIBUTECODETABLENAME nvarchar(300)
+    declare @ATTRIBUTEVALUE_COLUMNNAME nvarchar(300)
+    declare @ATTRIBUTE_IDCOLUMNNAME nvarchar(10)
+    declare @ATTRIBUTEVALUE_XLATE nvarchar(100)
+
+    select 
+           @ATTRIBUTETABLENAME=TC.TABLENAME
+          ,@ATTRIBUTECODETABLENAME=CTC.DBTABLENAME 
+	      ,@ATTRIBUTE_IDCOLUMNNAME= case when AC.ONLYALLOWONEPERRECORD = 1 then 'ID' else 'PARENTID' end
+          ,@ATTRIBUTEVALUE_COLUMNNAME= case when AC.DATATYPECODE = '4' then 'BOOLEANCODE'
+										    when AC.DATATYPECODE = '5'  then CTC.DBTABLENAME + 'ID'
+										    when AC.DATATYPECODE = '6' then 'CONSTITUENTVALUEID'
+										    else 'VALUE'
+								       end
+          ,@ATTRIBUTEVALUE_XLATE= case when AC.DATATYPECODE = '4' then 'BOOLEANCODE'
+	                                     when AC.DATATYPECODE = '5' then '(select DESCRIPTION from '+CTC.DBTABLENAME+' where ID = ' + CTC.DBTABLENAME + 'ID'+')'
+									     when AC.DATATYPECODE = '6' then '(select NAME from dbo.CONSTITUENT where ID = CONSTITUENTVALUEID)'
+                                         else 'VALUE'
+							        end
+    from ATTRIBUTECATEGORY AC
+         inner join ATTRIBUTERECORDTYPE ART on AC.ATTRIBUTERECORDTYPEID = ART.ID
+	     inner join RECORDTYPE RT on ART.RECORDTYPEID = RT.ID
+	     inner join TABLECATALOG TC on AC.TABLECATALOGID = TC.ID
+	     left join CODETABLECATALOG CTC on AC.CODETABLECATALOGID = CTC.ID
+    where RT.NAME = @RECORDTYPE_NAME
+    and AC.NAME = @ATTRIBUTE_NAME
+    
+    declare @sql nvarchar(max);
+    set @sql = 'select top 1 @ATTRIBUTE_VALUE=' + @ATTRIBUTEVALUE_COLUMNNAME +', @ATTRIBUTE_VALUE_XLATED=' + @ATTRIBUTEVALUE_XLATE + ' from ' + @ATTRIBUTETABLENAME + ' where ' + @ATTRIBUTE_IDCOLUMNNAME + ' = ''' +  CAST(@ID as nvarchar(36)) + ''''
+    exec sp_executesql @sql, N'@ATTRIBUTE_VALUE nvarchar(max) output, @ATTRIBUTE_VALUE_XLATED nvarchar(max) output', @ATTRIBUTE_VALUE output, @ATTRIBUTE_VALUE_XLATED output
+    
+end
+		]]>
+	</CreateProcedureSQL>
+    <GrantPermissionToDatabaseRoles>
+        <c:DatabaseRole>BBAPPFXSERVICEROLE</c:DatabaseRole>
+    </GrantPermissionToDatabaseRoles>
+</SQLStoredProcedureSpec>

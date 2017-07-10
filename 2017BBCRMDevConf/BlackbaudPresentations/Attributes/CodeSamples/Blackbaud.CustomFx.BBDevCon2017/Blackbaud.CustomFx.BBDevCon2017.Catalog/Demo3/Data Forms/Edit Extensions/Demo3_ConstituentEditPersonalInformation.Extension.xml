@@ -1,0 +1,109 @@
+﻿<EditDataFormTemplateSpec 
+	xmlns="bb_appfx_editdataformtemplate"
+	xmlns:c="bb_appfx_commontypes" 
+	ID="D29C4D20-B547-4441-B684-9AE1284DDFBD" 
+	Name="BBDEVCON DEMO 3"
+	Description="BBDEVCON DEMO 3" 
+	Author="Blackbaud Professional Services"
+	DataFormInstanceID="CC1EEF32-6F57-4084-8E0A-0DD96E320B92" 
+	RecordType="Constituent"
+	c:SecurityUIFolder="Custom\BBDEVCON"
+	FormHeader="BBDEVCON DEMO 3"
+	>
+
+	<SPDataForm>
+
+		<!-- define the edit load SP, which is used to load the data for the form -->
+		<LoadImplementation SPName="USR_USP_DATAFORMTEMPLATE_EDITLOAD_DEMO3_CONSTITUENTEDITPERSONALINFORMATION">
+			<c:CreateProcedureSQL>
+				<![CDATA[
+create procedure dbo.USR_USP_DATAFORMTEMPLATE_EDITLOAD_DEMO3_CONSTITUENTEDITPERSONALINFORMATION
+(
+    @ID uniqueidentifier,
+    @DATALOADED bit = 0 output,
+    @TSLONG bigint = 0 output,
+	@DEMO3TEXT nvarchar(200) = null output,
+    @DEMO3DATE date = null output
+    
+)
+as
+
+	set nocount on;
+
+	-- be sure to set these, in case the select returns no rows
+	set @DATALOADED = 1
+	set @TSLONG = 0
+    
+    select @DEMO3TEXT = VALUE from USR_SYN_CONSTITUENT_DEMO3TEXT where ID = @ID
+    select @DEMO3DATE = VALUE from USR_SYN_CONSTITUENT_DEMO3DATE where ID = @ID
+
+	return 0;
+				]]>
+			</c:CreateProcedureSQL>
+		</LoadImplementation>
+
+		<SaveImplementation SPName="USR_USP_DATAFORMTEMPLATE_EDIT_DEMO3_CONSTITUENTEDITPERSONALINFORMATION">
+			<c:CreateProcedureSQL>
+				<![CDATA[
+create procedure dbo.USR_USP_DATAFORMTEMPLATE_EDIT_DEMO3_CONSTITUENTEDITPERSONALINFORMATION 
+(
+	@ID uniqueidentifier,
+	@CHANGEAGENTID uniqueidentifier = null,
+	@DEMO3TEXT nvarchar(200),
+    @DEMO3DATE datetime
+)
+as
+
+	set nocount on;
+
+	if @CHANGEAGENTID is null  
+		exec dbo.USP_CHANGEAGENT_GETORCREATECHANGEAGENT @CHANGEAGENTID output
+				
+	declare @CURRENTDATE datetime
+	set @CURRENTDATE = getdate()
+
+	begin try
+        merge dbo.USR_SYN_CONSTITUENT_DEMO3TEXT as target
+        using ( select @ID, @DEMO3TEXT) as source (ID, VALUE)
+        on target.ID = source.ID
+        when MATCHED then
+            UPDATE SET VALUE=source.VALUE ,CHANGEDBYID=@CHANGEAGENTID ,DATECHANGED=@CURRENTDATE
+        when NOT MATCHED then
+            INSERT (ID, VALUE, COMMENT, STARTDATE, ENDDATE, ADDEDBYID, CHANGEDBYID, DATEADDED, DATECHANGED)
+            VALUES (ID, source.VALUE, '',null, null, @CHANGEAGENTID, @CHANGEAGENTID, @CURRENTDATE, @CURRENTDATE);    
+            
+        merge dbo.USR_SYN_CONSTITUENT_DEMO3DATE as target
+        using ( select @ID, @DEMO3DATE) as source (ID, VALUE)
+        on target.ID = source.ID
+        when MATCHED then
+            UPDATE SET VALUE=source.VALUE ,CHANGEDBYID=@CHANGEAGENTID ,DATECHANGED=@CURRENTDATE
+        when NOT MATCHED then
+            INSERT (ID, VALUE, COMMENT, STARTDATE, ENDDATE, ADDEDBYID, CHANGEDBYID, DATEADDED, DATECHANGED)
+            VALUES (ID, source.VALUE, '',null, null, @CHANGEAGENTID, @CHANGEAGENTID, @CURRENTDATE, @CURRENTDATE);                
+    
+
+	end try
+	begin catch
+		exec dbo.USP_RAISE_ERROR
+		return 1
+	end catch
+
+return 0;
+				]]>
+			</c:CreateProcedureSQL>
+		</SaveImplementation>
+
+	</SPDataForm>
+
+	<!-- describe fields on the form, which correspond to parameters on the SP.  Note that system paramters 
+	like the record ID, DATALOADED, TSLONG, and CURRENTAPPUSERID need not be listed. -->
+	<FormMetaData xmlns="bb_appfx_commontypes">
+		<FormFields>
+			<FormField FieldID="DEMO3TEXT" Caption="Demo 3 text" DataType="String" MaxLength="200" />
+            <FormField FieldID="DEMO3DATE" Caption="Demo 3 date" DataType="Date"/>
+		</FormFields>
+	</FormMetaData>
+
+	<c:DataFormExtension DataFormInstanceID="788ab947-26ed-40c4-865e-8fe29577e593" RenderStyle="Tab" TabCaption="Demo3"/>
+	
+</EditDataFormTemplateSpec>

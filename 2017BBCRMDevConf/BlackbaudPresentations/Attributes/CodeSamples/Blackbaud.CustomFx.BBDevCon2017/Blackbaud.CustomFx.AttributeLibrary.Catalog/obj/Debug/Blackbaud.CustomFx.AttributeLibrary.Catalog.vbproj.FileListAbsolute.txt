@@ -1,0 +1,4 @@
+D:\bbec\installs\BBDEVCON\bbappfx\vroot\bin\custom\Blackbaud.CustomFx.AttributeLibrary.Catalog.dll
+D:\bbec\installs\BBDEVCON\bbappfx\vroot\bin\custom\Blackbaud.CustomFx.AttributeLibrary.Catalog.pdb
+D:\vsprojects\BBDEVCON\Blackbaud.CustomFx.BBDevCon2017\Blackbaud.CustomFx.AttributeLibrary.Catalog\obj\Debug\Blackbaud.CustomFx.AttributeLibrary.Catalog.dll
+D:\vsprojects\BBDEVCON\Blackbaud.CustomFx.BBDevCon2017\Blackbaud.CustomFx.AttributeLibrary.Catalog\obj\Debug\Blackbaud.CustomFx.AttributeLibrary.Catalog.pdb

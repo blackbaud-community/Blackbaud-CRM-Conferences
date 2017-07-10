@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html charset="utf-8" ng-app="skytutorial" ng-controller="MainController as mainCtrl">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>2017 Dev Con</title>
+  <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.6/css/sky-bundle.css" integrity="sha384-0qQTcXi3TFJvyqm3IBveZiYW0GHbY8LuphtukDr6FkZdy6FEXIHdQ6yF6Z3GUbvK" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-cloak>
+  <div class="container-fluid">
+  <div class="row bb-page-content-multicolumn">
+    <div class="col-md-6 bb-page-content-tile-column">
+  <div ng-if="sessionInfo">
+    <div ng-controller="ConstituentListController as constitListCtrl">
+    <h4>Search for a Constituent!</h4>
+      <p>
+        <form novalidate  ng-submit="submit(constitListCtrl.constituentQuickFindText)" class="form-inline">
+          <div class="form-group">
+            <input type="text" ng-model="constitListCtrl.constituentQuickFindText" placeholder="Search for a constituent" class="form-control">
+            <button type="submit" class="btn">Search</button>
+          </div>
+        </form>
+      </p>
+      <div class="row">
+      <div class="col-md-6">
+       <bb-repeater  ng-if="constitListCtrl.constituents.length > 0" bb-wait="loading">
+              <bb-repeater-item ng-repeat="constituent in constitListCtrl.constituents" bb-repeater-item-expanded="item.expanded" >
+                <bb-repeater-item-title>
+                  <div class="pull-left">
+                    <!-- This is hardcoded for demo, use angular routing -->
+                    <a ng-href="http://localhost/devcondemo/constituentpage.html#?constituentId={{constituent.id}}" >{{constituent.fullName}}</a>
+                  </div>
+                </bb-repeater-item-title>
+                <bb-repeater-item-content>
+                  <div>
+                    {{constituent.addressBlock}}  {{constituent.city}} {{constituent.state}} {{constituent.zip}} 
+                  </div>
+                </bb-repeater-item-content>
+              </bb-repeater-item>
+            </bb-repeater>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+  </div>
+  <script src="https://sky.blackbaudcdn.net/skyux/1.6.6/js/sky-bundle.min.js" integrity="sha384-DD+Y69jYPzp2eVhGSZyfXyW+TxZpImxAF4T16WyV4YVpycGhkUVzOiCE0jKscve/" crossorigin="anonymous"></script>
+  <script src="bower_components/bbui-angular/dist/js/bbui.js"></script>
+  <script src="index.js"></script>
+  <script src="constituentlist.controller.js"></script>
+</body>
+
+</html>

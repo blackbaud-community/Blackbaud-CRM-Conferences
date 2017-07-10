@@ -1,0 +1,23 @@
+{
+  "name": "bbui-test",
+  "description": "Demo BBUI",
+  "main": "index.html",
+  "authors": [
+    "Tony Knopp",
+    "Scott Freeman"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bbui-angular": "git+https://github.com/blackbaud/bbui-angular#~1.0.6",
+    "angular": "^1.6.2"
+  }
+}

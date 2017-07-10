@@ -1,0 +1,93 @@
+﻿<EditDataFormTemplateSpec 
+	xmlns="bb_appfx_editdataformtemplate"
+	xmlns:c="bb_appfx_commontypes" 
+	ID="ba840a22-e326-40f2-8b1b-4c74588bba0c" 
+	Name="BBDEVCON DEMO 1"
+	Description="BBDEVCON DEMO 1" 
+	Author="Blackbaud Professional Services"
+	DataFormInstanceID="1fb81fa3-980b-4825-b6eb-a01c3fe416f4" 
+	RecordType="Constituent"
+	c:SecurityUIFolder="Custom\BBDEVCON"
+	FormHeader="BBDEVCON DEMO 1"
+	>
+
+	<SPDataForm>
+
+		<!-- define the edit load SP, which is used to load the data for the form -->
+		<LoadImplementation SPName="USR_USP_DATAFORMTEMPLATE_EDITLOAD_DEMO1_CONSTITUENTEDITPERSONALINFORMATION">
+			<c:CreateProcedureSQL>
+				<![CDATA[
+create procedure dbo.USR_USP_DATAFORMTEMPLATE_EDITLOAD_DEMO1_CONSTITUENTEDITPERSONALINFORMATION
+(
+    @ID uniqueidentifier,
+    @DATALOADED bit = 0 output,
+    @TSLONG bigint = 0 output,
+	@DEMO1TEXT nvarchar(200) = null output,
+    @DEMO1DATE date = null output
+    
+)
+as
+
+	set nocount on;
+
+	-- be sure to set these, in case the select returns no rows
+	set @DATALOADED = 1
+	set @TSLONG = 0
+    declare @XLATIONHOLDER nvarchar(200)
+    
+    exec dbo.USR_USP_GETATTRIBUTEVALUEANDTRANSLATION 'Constituent','Demo1Text', @ID, @DEMO1TEXT OUTPUT, @XLATIONHOLDER OUTPUT
+    exec dbo.USR_USP_GETATTRIBUTEVALUEANDTRANSLATION 'Constituent','Demo1Date', @ID, @DEMO1DATE OUTPUT, @XLATIONHOLDER OUTPUT
+
+	return 0;
+				]]>
+			</c:CreateProcedureSQL>
+		</LoadImplementation>
+
+		<SaveImplementation SPName="USR_USP_DATAFORMTEMPLATE_EDIT_DEMO1_CONSTITUENTEDITPERSONALINFORMATION">
+			<c:CreateProcedureSQL>
+				<![CDATA[
+create procedure dbo.USR_USP_DATAFORMTEMPLATE_EDIT_DEMO1_CONSTITUENTEDITPERSONALINFORMATION 
+(
+	@ID uniqueidentifier,
+	@CHANGEAGENTID uniqueidentifier = null,
+	@DEMO1TEXT nvarchar(200),
+    @DEMO1DATE datetime
+)
+as
+
+	set nocount on;
+
+	if @CHANGEAGENTID is null  
+		exec dbo.USP_CHANGEAGENT_GETORCREATECHANGEAGENT @CHANGEAGENTID output
+				
+	declare @CURRENTDATE datetime
+	set @CURRENTDATE = getdate()
+
+	begin try
+        exec dbo.USR_USP_UPSERT_ATTRIBUTEVALUE 'Constituent','Demo1Text', @ID, @DEMO1TEXT
+        exec dbo.USR_USP_UPSERT_ATTRIBUTEVALUE 'Constituent','Demo1Date', @ID, @DEMO1DATE
+	end try
+	begin catch
+		exec dbo.USP_RAISE_ERROR
+		return 1
+	end catch
+
+return 0;
+				]]>
+			</c:CreateProcedureSQL>
+		</SaveImplementation>
+
+	</SPDataForm>
+
+	<!-- describe fields on the form, which correspond to parameters on the SP.  Note that system paramters 
+	like the record ID, DATALOADED, TSLONG, and CURRENTAPPUSERID need not be listed. -->
+	<FormMetaData xmlns="bb_appfx_commontypes">
+		<FormFields>
+			<FormField FieldID="DEMO1TEXT" Caption="Demo 1 text" DataType="String" MaxLength="200" />
+            <FormField FieldID="DEMO1DATE" Caption="Demo 1 date" DataType="Date"/>
+		</FormFields>
+	</FormMetaData>
+
+	<c:DataFormExtension DataFormInstanceID="788ab947-26ed-40c4-865e-8fe29577e593" RenderStyle="Tab" TabCaption="Demo1"/>
+	
+</EditDataFormTemplateSpec>

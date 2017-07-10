@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SnapLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SnapList>
+    <S Time="2017-06-27T18:54:50.4943705-04:00">
+      <SnapShots>
+        <C server="(local)" SPID="1" t="2017-06-27T18:54:50.24" cmd="UNKNOWN TOKEN" stat="background" lbatch="2017-06-27T10:32:59.717" logint="2017-06-27T10:32:59.717" lwt="QDS_PERSIST_TASK_MAIN_LOOP_SLEEP" myid="64" tet="30111821" dbname="master" />
+        <C server="(local)" SPID="2" t="2017-06-27T18:54:50.243" cmd="UNKNOWN TOKEN" stat="background" lbatch="2017-06-27T10:32:59.72" logint="2017-06-27T10:32:59.72" lwt="QDS_CLEANUP_STALE_QUERIES_TASK_M" myid="64" tet="30111823" dbname="master" />
+        <C server="(local)" SPID="3" t="2017-06-27T18:54:50.247" cmd="UNKNOWN TOKEN" stat="background" lbatch="2017-06-27T10:32:59.72" logint="2017-06-27T10:32:59.72" lwt="SLEEP_TASK" myid="64" tet="30111827" dbname="master" />
+        <C server="(local)" SPID="4" t="2017-06-27T18:54:50.25" cmd="LOG WRITER" stat="background" lbatch="2017-06-27T10:32:59.767" logint="2017-06-27T10:32:59.767" lwt="LOGMGR_QUEUE" myid="64" tet="30111783" dbname="master" />
+        <C server="(local)" SPID="5" t="2017-06-27T18:54:50.257" cmd="RECOVERY WRITER" stat="background" lbatch="2017-06-27T10:32:59.77" logint="2017-06-27T10:32:59.77" lwt="DIRTY_PAGE_POLL" myid="64" tet="30111786" dbname="master" />
+        <C server="(local)" SPID="6" t="2017-06-27T18:54:50.26" cmd="LOCK MONITOR" stat="background" lbatch="2017-06-27T10:32:59.77" logint="2017-06-27T10:32:59.77" lwt="REQUEST_FOR_DEADLOCK_SEARCH" myid="64" tet="30111790" dbname="master" />
+        <C server="(local)" SPID="7" t="2017-06-27T18:54:50.263" cmd="XTP_THREAD_POOL" stat="background" lbatch="2017-06-27T10:32:59.77" logint="2017-06-27T10:32:59.77" lwt="DISPATCHER_QUEUE_SEMAPHORE" myid="64" tet="30111794" dbname="master" />
+        <C server="(local)" SPID="8" t="2017-06-27T18:54:50.27" cmd="SIGNAL HANDLER" stat="background" lbatch="2017-06-27T10:32:59.77" logint="2017-06-27T10:32:59.77" lwt="KSOURCE_WAKEUP" myid="64" tet="30108159" dbname="master" />
+        <C server="(local)" SPID="9" t="2017-06-27T18:54:50.273" cmd="LAZY WRITER" stat="background" lbatch="2017-06-27T10:32:59.77" logint="2017-06-27T10:32:59.77" lwt="LAZYWRITER_SLEEP" myid="64" tet="30111801" dbname="master" />
+        <C server="(local)" SPID="10" t="2017-06-27T18:54:50.277" cmd="TASK MANAGER" lbatch="2017-06-27T18:28:11.493" logint="2017-06-27T18:28:11.493" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="11" t="2017-06-27T18:54:50.28" cmd="XTP_CKPT_AGENT" stat="background" lbatch="2017-06-27T10:32:59.777" logint="2017-06-27T10:32:59.777" lwt="WAIT_XTP_HOST_WAIT" myid="64" tet="30111805" dbname="master" />
+        <C server="(local)" SPID="12" t="2017-06-27T18:54:50.287" cmd="TASK MANAGER" lbatch="2017-06-27T10:33:00.237" logint="2017-06-27T10:33:00.237" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="13" t="2017-06-27T18:54:50.29" cmd="TRACE QUEUE TASK" stat="background" lbatch="2017-06-27T10:33:00.307" logint="2017-06-27T10:33:00.307" lwt="SQLTRACE_INCREMENTAL_FLUSH_SLEEP" myid="64" tet="30111284" dbname="master" />
+        <C server="(local)" SPID="14" t="2017-06-27T18:54:50.293" cmd="SYSTEM_HEALTH_MO" stat="background" lbatch="2017-06-27T10:33:00.317" logint="2017-06-27T10:33:00.317" lwt="SP_SERVER_DIAGNOSTICS_SLEEP" myid="64" tet="30111278" dbname="master" />
+        <C server="(local)" SPID="15" t="2017-06-27T18:54:50.3" cmd="RECEIVE" stat="background" lbatch="2017-06-27T10:33:00.317" logint="2017-06-27T10:33:00.317" lwt="PREEMPTIVE_OS_REPORTEVENT" myid="64" tet="30111281" dbname="master" />
+        <C server="(local)" SPID="16" t="2017-06-27T18:54:50.303" cmd="TASK MANAGER" stat="background" lbatch="2017-06-27T10:33:00.343" logint="2017-06-27T10:33:00.343" lwt="ONDEMAND_TASK_QUEUE" myid="64" tet="30111258" dbname="master" />
+        <C server="(local)" SPID="17" t="2017-06-27T18:54:50.307" cmd="CHECKPOINT" stat="background" lbatch="2017-06-27T10:33:00.343" logint="2017-06-27T10:33:00.343" lwt="CHECKPOINT_QUEUE" myid="64" tet="30111263" dbname="master" />
+        <C server="(local)" SPID="18" t="2017-06-27T18:54:50.307" cmd="TASK MANAGER" lbatch="2017-06-27T18:28:11.493" logint="2017-06-27T18:28:11.493" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="19" t="2017-06-27T18:54:50.307" cmd="TASK MANAGER" lbatch="2017-06-27T18:28:11.493" logint="2017-06-27T18:28:11.493" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="20" t="2017-06-27T18:54:50.307" cmd="TASK MANAGER" lbatch="2017-06-27T18:28:11.493" logint="2017-06-27T18:28:11.493" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="21" t="2017-06-27T18:54:50.307" cmd="RESOURCE MONITOR" stat="background" lbatch="2017-06-27T10:33:03.88" logint="2017-06-27T10:33:03.88" lwt="SLEEP_TASK" myid="64" tet="30107729" dbname="master" />
+        <C server="(local)" SPID="22" t="2017-06-27T18:54:50.31" cmd="XE TIMER" stat="background" lbatch="2017-06-27T10:33:03.88" logint="2017-06-27T10:33:03.88" lwt="XE_TIMER_EVENT" myid="64" tet="30107729" dbname="master" />
+        <C server="(local)" SPID="23" t="2017-06-27T18:54:50.31" cmd="XE DISPATCHER" stat="background" lbatch="2017-06-27T10:33:03.88" logint="2017-06-27T10:33:03.88" lwt="XE_DISPATCHER_WAIT" myid="64" tet="30107729" dbname="master" />
+        <C server="(local)" SPID="24" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:28:11.493" logint="2017-06-27T18:28:11.493" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="25" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:29:06.51" logint="2017-06-27T18:29:06.51" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="26" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:29:06.51" logint="2017-06-27T18:29:06.51" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="27" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:29:06.51" logint="2017-06-27T18:29:06.51" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="28" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:25:06.437" logint="2017-06-27T18:25:06.437" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="29" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:25:06.437" logint="2017-06-27T18:25:06.437" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="30" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:29:06.51" logint="2017-06-27T18:29:06.51" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="31" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:29:06.51" logint="2017-06-27T18:29:06.51" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="32" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:25:06.437" logint="2017-06-27T18:25:06.437" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="33" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:29:06.51" logint="2017-06-27T18:29:06.51" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="34" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:29:06.51" logint="2017-06-27T18:29:06.51" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="35" t="2017-06-27T18:54:50.31" cmd="TASK MANAGER" lbatch="2017-06-27T18:29:06.51" logint="2017-06-27T18:29:06.51" lwt="MISCELLANEOUS" myid="64" dbname="master" />
+        <C server="(local)" SPID="38" t="2017-06-27T18:54:50.31" cmd="BRKR EVENT HNDLR" stat="background" lbatch="2017-06-27T10:33:01.597" logint="2017-06-27T10:33:01.597" lwt="BROKER_EVENTHANDLER" myid="64" tet="30110012" dbname="master" />
+        <C server="(local)" SPID="42" t="2017-06-27T18:54:50.31" cmd="BRKR TASK" stat="background" lbatch="2017-06-27T10:33:01.61" logint="2017-06-27T10:33:01.61" lwt="BROKER_TRANSMITTER" myid="64" tet="30110000" dbname="master" />
+        <C server="(local)" SPID="43" t="2017-06-27T18:54:50.31" cmd="BRKR TASK" stat="background" lbatch="2017-06-27T10:33:01.61" logint="2017-06-27T10:33:01.61" lwt="HADR_FILESTREAM_IOMGR_IOCOMPLETI" myid="64" tet="30110000" dbname="master" />
+        <C server="(local)" SPID="44" t="2017-06-27T18:54:50.313" cmd="BRKR TASK" stat="background" lbatch="2017-06-27T10:33:01.61" logint="2017-06-27T10:33:01.61" lwt="BROKER_TO_FLUSH" myid="64" tet="30110001" dbname="master" />
+        <C server="(local)" SPID="45" t="2017-06-27T18:54:50.313" cmd="BRKR TASK" stat="background" lbatch="2017-06-27T10:33:01.61" logint="2017-06-27T10:33:01.61" lwt="BROKER_TRANSMITTER" myid="64" tet="30110001" dbname="master" />
+        <C server="(local)" SPID="51" t="2017-06-27T18:54:50.313" host="CHS6DAVIDHEN02" ntuser="DavidHe" login="BLACKBAUD\DavidHe" pname="Microsoft SQL Server Management Studio - Query" lbatch="2017-06-27T18:54:40.547" logint="2017-06-27T13:12:33.55" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_Demo">
+          <SQLInput>dbcc dropcleanbuffers;
+dbcc freeproccache;</SQLInput>
+        </C>
+        <C server="(local)" SPID="52" t="2017-06-27T18:54:50.313" host="CHS6DAVIDHEN02" ntuser="NETWORK SERVICE" login="NT AUTHORITY\NETWORK SERVICE" pname="Report Server" lbatch="2017-06-27T18:53:22.24" logint="2017-06-27T18:53:22.243" lwt="MISCELLANEOUS" myid="64" dbname="ReportServer">
+          <SQLInput>
+                                    declare @BatchID uniqueidentifier
+
+                                    set @BatchID = newid()
+
+                                    UPDATE [Notifications] WITH (TABLOCKX)
+                                        SET [BatchID] = @BatchID,
+                                        [ProcessStart] = GETUTCDATE(),
+                                        [ProcessHeartbeat] = GETUTCDATE()
+                                    FROM (
+                                        SELECT TOP 8  [NotificationID] FROM [Notifications] WITH (TABLOCKX) WHERE ProcessStart is NULL and
+	                                    (ProcessAfter is NULL or ProcessAfter &lt; GETUTCDATE()) ORDER BY [NotificationEntered]
+                                    ) AS t1
+                                    WHERE [Notifications].[NotificationID] = t1.[NotificationID]
+
+                                    select top 8
+		                                    -- Notification data
+		                                    N.[NotificationID],
+		                                    N.[SubscriptionID],
+		                                    N.[ActivationID],
+		                                    N.[ReportID],
+		                                    N.[SnapShotDate],
+		                                    N.[DeliveryExtension],
+		                                    N.[ExtensionSettings],
+                                            N.[Locale],
+		                                    N.[Parameters],
+		                                    N.[SubscriptionLastRunTime],
+		                                    N.[ProcessStart],
+		                                    N.[NotificationEntered],
+		                                    N.[Attempt],
+		                                    N.[IsDataDriven],
+		                                    SUSER_SNAME(Owner.[Sid]),
+		                                    Owner.[UserName],
+		                                    -- Report Data
+		                                    O.[Path],
+		                                    N.[ReportZone],
+		                                    O.[Type],
+		                                    SD.NtSecDescPrimary,
+                                            N.[Version],
+                                            Owner.[AuthType]
+	                                    from 
+		                                    [Notifications] N with (TABLOCKX) inner join [Catalog] O on O.[ItemID] = N.[ReportID]
+		                                    inner join [Users] Owner on N.SubscriptionOwnerID = Owner.UserID
+		                                    left outer join [SecData] SD on O.[PolicyID] = SD.[PolicyID] AND SD.AuthType = Owner.AuthType
+	                                    where 
+		                                    N.[BatchID] = @BatchID
+                                    ORDER BY [NotificationEntered]
+</SQLInput>
+        </C>
+        <C server="(local)" SPID="53" t="2017-06-27T18:54:50.313" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:40.66" logint="2017-06-27T18:54:40.663" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>(@queues1 nvarchar(4000),@timeout float)delete top (1) from [HangFire].JobQueue with (readpast, updlock, rowlock)
+output DELETED.Id, DELETED.JobId, DELETED.Queue
+where (FetchedAt is null or FetchedAt &lt; DATEADD(second, @timeout, GETUTCDATE()))
+and Queue in (@queues1)</SQLInput>
+        </C>
+        <C server="(local)" SPID="54" t="2017-06-27T18:54:50.41" start="244" end="3578" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" cmd="SELECT" pname="Blackbaud App Server Query" stat="runnable" lbatch="2017-06-27T18:54:49.88" logint="2017-06-27T18:54:49.88" lwt="PAGELATCH_SH" myid="64" tet="434" dbname="BBInfinity_Demo">
+          <SQL>-- SQL Generated by AdHocQuerySqlBuilder.BuildSql 
+-- User: BLACKBAUD\DavidHe 
+declare @MAXROWS int; 
+set @MAXROWS = 31; 
+with QVROWNUM_CTE as (select QVROWNUMINNER_CTE.*,  
+row_number() over(order by [Name] asc) QUERYROWNUMBER from ( 
+select 	[UFN_QUERY_QUERIESLIST].[NAME] as [Name], 
+	[UFN_QUERY_QUERIESLIST].[FAVORITEPIC] as [Is favorite], 
+	[UFN_QUERY_QUERIESLIST].[FOLDERPATH] as [Folder], 
+	[UFN_QUERY_QUERIESLIST].[OWNER] as [Owner], 
+	[UFN_QUERY_QUERIESLIST].[DATEADDED] as [Created on], 
+	[UFN_QUERY_QUERIESLIST].[LASTRUNDATE] as [Last run on], 
+	[UFN_QUERY_QUERIESLIST].[QUERYCATEGORYCODE_DESCRIPTION] as [Category], 
+	[UFN_QUERY_QUERIESLIST].[HASSELECTION] as [Has selection], 
+	[UFN_QUERY_QUERIESLIST].[SITE] as [Site], 
+	[UFN_QUERY_QUERIESLIST].[ID] as [Query ID], 
+	[UFN_QUERY_QUERIESLIST].[ISFAVORITE] as [Favorite], 
+	[UFN_QUERY_QUERIESLIST].[QUERY_TYPE] as [Query type ID], 
+	[UFN_QUERY_QUERIESLIST].[ISBROWSABLE] as [Is browsable], 
+	[UFN_QUERY_QUERIESLIST].[MOBILIZE] as [Mobilized], 
+	[UFN_QUERY_QUERIESLIST].[OWNERID] as [Owner ID], 
+	[UFN_QUERY_QUERIESLIST].[USERCANEDIT] as [User can edit], 
+	[UFN_QUERY_QUERIESLIST].[OTHERSCANMODIFY] as [Others can modify], 
+	[UFN_QUERY_QUERIESLIST].[GROUPEDBY] as [Grouped by] 
+from dbo.[UFN_QUERY_QUERIESLIST](N'c332af83-bf6c-4ec1-b62b-b396dfc9c37b',0,0,null,N'f85c84e0-c486-4d80-91b7-909f04302f6c',N'2043b264-918e-4c28-8b6c-250b62b0106b',10,N'&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;FEATURETIPS /&gt;') as [UFN_QUERY_QUERIESLIST] 
+) QVROWNUMINNER_CTE  
+) select top(@MAXROWS) QVROWNUMBERDATA_SUBSELECT.QVPAGINGFULRESULTCOUNT, QVROWNUM_CTE.* from QVROWNUM_CTE 
+outer apply (select count(*) [QVPAGINGFULRESULTCOUNT] from QVROWNUM_CTE) QVROWNUMBERDATA_SUBSELECT 
+where QVROWNUM_CTE.QUERYROWNUMBER between 1 and 30 
+order by [Name] asc 
+ 
+ 
+</SQL>
+          <SQLInput>-- SQL Generated by AdHocQuerySqlBuilder.BuildSql
+-- User: BLACKBAUD\DavidHe
+declare @MAXROWS int;
+set @MAXROWS = 31;
+with QVROWNUM_CTE as (select QVROWNUMINNER_CTE.*, 
+row_number() over(order by [Name] asc) QUERYROWNUMBER from (
+select 	[UFN_QUERY_QUERIESLIST].[NAME] as [Name],
+	[UFN_QUERY_QUERIESLIST].[FAVORITEPIC] as [Is favorite],
+	[UFN_QUERY_QUERIESLIST].[FOLDERPATH] as [Folder],
+	[UFN_QUERY_QUERIESLIST].[OWNER] as [Owner],
+	[UFN_QUERY_QUERIESLIST].[DATEADDED] as [Created on],
+	[UFN_QUERY_QUERIESLIST].[LASTRUNDATE] as [Last run on],
+	[UFN_QUERY_QUERIESLIST].[QUERYCATEGORYCODE_DESCRIPTION] as [Category],
+	[UFN_QUERY_QUERIESLIST].[HASSELECTION] as [Has selection],
+	[UFN_QUERY_QUERIESLIST].[SITE] as [Site],
+	[UFN_QUERY_QUERIESLIST].[ID] as [Query ID],
+	[UFN_QUERY_QUERIESLIST].[ISFAVORITE] as [Favorite],
+	[UFN_QUERY_QUERIESLIST].[QUERY_TYPE] as [Query type ID],
+	[UFN_QUERY_QUERIESLIST].[ISBROWSABLE] as [Is browsable],
+	[UFN_QUERY_QUERIESLIST].[MOBILIZE] as [Mobilized],
+	[UFN_QUERY_QUERIESLIST].[OWNERID] as [Owner ID],
+	[UFN_QUERY_QUERIESLIST].[USERCANEDIT] as [User can edit],
+	[UFN_QUERY_QUERIESLIST].[OTHERSCANMODIFY] as [Others can modify],
+	[UFN_QUERY_QUERIESLIST].[GROUPEDBY] as [Grouped by]
+from dbo.[UFN_QUERY_QUERIESLIST](N'c332af83-bf6c-4ec1-b62b-b396dfc9c37b',0,0,null,N'f85c84e0-c486-4d80-91b7-909f04302f6c',N'2043b264-918e-4c28-8b6c-250b62b0106b',10,N'&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;FEATURETIPS /&gt;') as [UFN_QUERY_QUERIESLIST]
+) QVROWNUMINNER_CTE 
+) select top(@MAXROWS) QVROWNUMBERDATA_SUBSELECT.QVPAGINGFULRESULTCOUNT, QVROWNUM_CTE.* from QVROWNUM_CTE
+outer apply (select count(*) [QVPAGINGFULRESULTCOUNT] from QVROWNUM_CTE) QVROWNUMBERDATA_SUBSELECT
+where QVROWNUM_CTE.QUERYROWNUMBER between 1 and 30
+order by [Name] asc
+
+
+</SQLInput>
+        </C>
+        <C server="(local)" SPID="55" t="2017-06-27T18:54:50.487" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname="Blackbaud App Server" lbatch="2017-06-27T18:54:39.04" logint="2017-06-27T18:54:39.023" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>BBInfinity_CRM_Integration.dbo.USP_APPUSER_GETAPPUSERINFO_FROM_USERSID;1</SQLInput>
+        </C>
+        <C server="(local)" SPID="56" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:40.667" logint="2017-06-27T18:54:40.667" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>(@queues1 nvarchar(4000),@timeout float)delete top (1) from [HangFire].JobQueue with (readpast, updlock, rowlock)
+output DELETED.Id, DELETED.JobId, DELETED.Queue
+where (FetchedAt is null or FetchedAt &lt; DATEADD(second, @timeout, GETUTCDATE()))
+and Queue in (@queues1)</SQLInput>
+        </C>
+        <C server="(local)" SPID="57" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:40.633" logint="2017-06-27T18:54:40.633" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>(@queues1 nvarchar(4000),@timeout float)delete top (1) from [HangFire].JobQueue with (readpast, updlock, rowlock)
+output DELETED.Id, DELETED.JobId, DELETED.Queue
+where (FetchedAt is null or FetchedAt &lt; DATEADD(second, @timeout, GETUTCDATE()))
+and Queue in (@queues1)</SQLInput>
+        </C>
+        <C server="(local)" SPID="58" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:40.667" logint="2017-06-27T18:54:40.667" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>(@queues1 nvarchar(4000),@timeout float)delete top (1) from [HangFire].JobQueue with (readpast, updlock, rowlock)
+output DELETED.Id, DELETED.JobId, DELETED.Queue
+where (FetchedAt is null or FetchedAt &lt; DATEADD(second, @timeout, GETUTCDATE()))
+and Queue in (@queues1)</SQLInput>
+        </C>
+        <C server="(local)" SPID="59" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:41.51" logint="2017-06-27T18:54:41.507" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>sys.sp_releaseapplock;1</SQLInput>
+        </C>
+        <C server="(local)" SPID="60" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:40.633" logint="2017-06-27T18:54:40.633" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>(@queues1 nvarchar(4000),@timeout float)delete top (1) from [HangFire].JobQueue with (readpast, updlock, rowlock)
+output DELETED.Id, DELETED.JobId, DELETED.Queue
+where (FetchedAt is null or FetchedAt &lt; DATEADD(second, @timeout, GETUTCDATE()))
+and Queue in (@queues1)</SQLInput>
+        </C>
+        <C server="(local)" SPID="61" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:40.633" logint="2017-06-27T18:54:40.633" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>(@queues1 nvarchar(4000),@timeout float)delete top (1) from [HangFire].JobQueue with (readpast, updlock, rowlock)
+output DELETED.Id, DELETED.JobId, DELETED.Queue
+where (FetchedAt is null or FetchedAt &lt; DATEADD(second, @timeout, GETUTCDATE()))
+and Queue in (@queues1)</SQLInput>
+        </C>
+        <C server="(local)" SPID="62" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:40.633" logint="2017-06-27T18:54:40.633" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>(@queues1 nvarchar(4000),@timeout float)delete top (1) from [HangFire].JobQueue with (readpast, updlock, rowlock)
+output DELETED.Id, DELETED.JobId, DELETED.Queue
+where (FetchedAt is null or FetchedAt &lt; DATEADD(second, @timeout, GETUTCDATE()))
+and Queue in (@queues1)</SQLInput>
+        </C>
+        <C server="(local)" SPID="63" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname="Blackbaud App Server" lbatch="2017-06-27T18:54:50.48" logint="2017-06-27T18:54:50.48" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_Demo">
+          <SQLInput>BBInfinity_Demo.dbo.USP_QUERYVIEW_GETMETADATA;1</SQLInput>
+        </C>
+        <C server="(local)" SPID="64" t="2017-06-27T18:54:50.49" start="1770" end="3406" host="CHS6DAVIDHEN02" ntuser="DavidHe" login="BLACKBAUD\DavidHe" cmd="SELECT" pname="SQLSnap 2006" stat="runnable" lbatch="2017-06-27T18:54:50.49" logint="2017-06-27T18:54:50.21" lwt="MISCELLANEOUS" myid="64" dbname="master">
+          <SQL>SQLSnap batch</SQL>
+          <SQLInput>(@iSPID int)
+/*
+SQL Snap Executing Query script
+
+SQL Server 2005 (or Later) Version
+
+****************************************
+Copyright 2005-2008 Blackbaud CoreTech
+****************************************
+
+****************************************
+pdg 7.7.2008
+Added database_name to result set 2.
+****************************************
+
+*/
+declare @h binary(20), @start int, @end int,@cmd varchar(255),@status as varchar(255)
+declare @qp xml;
+
+declare @hostname nchar(128)
+declare @program_name nchar(128)
+declare @loginame nchar(128)
+declare @blocked smallint
+declare @waittime int
+declare @lastwaittype nvarchar(34)
+declare @waitresource nchar(32)
+declare @dbid smallint
+declare @uid smallint
+declare @last_batch datetime
+declare @login_time datetime
+declare @open_tran smallint
+declare @nt_username nchar(128)
+
+declare @total_elapsed_time int
+
+select 
+@h=dmreq.sql_handle,
+@start = coalesce(dmreq.statement_start_offset,0), 
+@end = coalesce(dmreq.statement_end_offset,0),
+@cmd=sysprocs.cmd,
+
+@status=sysprocs.status,
+@hostname=sysprocs.hostname,
+@program_name=sysprocs.program_name,
+@loginame=sysprocs.loginame,
+@blocked =sysprocs.blocked,
+@waittime=sysprocs.waittime,
+@lastwaittype =sysprocs.lastwaittype,
+@waitresource =sysprocs.waitresource,
+@dbid =sysprocs.dbid,
+@uid =sysprocs.uid,
+@last_batch =sysprocs.last_batch,
+@login_time =sysprocs.login_time,
+@open_tran =sysprocs.open_tran,
+@nt_username=sysprocs.nt_username,
+
+@total_elapsed_time =coalesce(dmreq.total_elapsed_time,0)
+
+from master.dbo.sysprocesses as sysprocs
+left outer join master.sys.dm_exec_requests as dmreq on sysprocs.SPID= dmreq.session_id
+ where sysprocs.spid=@iSPID;
+
+declare @sqlText nvarchar(max);
+declare @object_name nvarchar(261); --Length is sysname*2 + '[]' + '[]' + '.'
+
+--Result set 1
+if @iSPID &lt;&gt; @@SPID  
+
+
+begin
+
+	begin try
+
+		select @h=dmreq.sql_handle,
+		@start = coalesce(dmreq.statement_start_offset,0), 
+		@end = coalesce(dmreq.statement_end_offset,0),
+		@total_elapsed_time =coalesce(dmreq.total_elapsed_time,0),	
+		@object_name = QUOTENAME(OBJECT_SCHEMA_NAME(sqltext.objectid, sqltext.[dbid])) + '.' + QUOTENAME(OBJECT_NAME(sqltext.objectid, sqltext.[dbid])),
+		@sqlText =sqltext.[text],
+		@last_batch=start_time,
+		@status=status,
+		@cmd=command,
+		@blocked=blocking_session_id,
+		@qp=(select qp.query_plan from sys.dm_exec_query_plan(dmreq.plan_handle) qp)
+		
+		FROM master.sys.dm_exec_requests as dmreq 
+		cross apply master.sys.dm_exec_sql_text(dmreq.sql_handle) as sqltext
+		where dmreq.session_id=@iSpid
+		
+			
+	end try
+	begin catch
+		select @sqlText ='Unable to get current SQL:' +  error_message()	
+	end catch
+
+	select @sqlText as sqlStmt
+
+end
+else
+begin
+	select 'SQLSnap batch' as sqlStmt
+end
+
+--	select  [text] as sqlStmt	from ::fn_get_sql(@h) as currentsql 
+
+--Result set 2
+select getDate() as t, @start as stmt_start ,@end as stmt_end ,
+@cmd as cmd ,
+@status as status,
+@hostname as hostname,
+@program_name as program_name,
+@loginame as loginame,
+@blocked as blocked,
+@waittime as waittime,
+cast(@lastwaittype as varchar(32)) as lastwaittype,
+@waitresource as waitresource,
+@dbid as dbid,
+@uid as uid,
+@last_batch as last_batch,
+@login_time as login_time,
+@open_tran as open_tran,
+@nt_username as nt_username,@@spid as ThisSPID,
+coalesce(@total_elapsed_time,0) as [total_elapsed_time],
+
+/* pdg 7.7.2008 SQL Snap enhancement - include the database name */
+DB_NAME(@dbid) AS [database_name],
+
+/* DPC 12/06/2010 Return the query plan XML instead of parsing it in SQL. */
+@qp as qp,
+
+@object_name as [object_name];
+
+--Result set 3
+dbcc inputbuffer (@iSPID)
+</SQLInput>
+        </C>
+        <C server="(local)" SPID="65" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname="Blackbaud App Server" lbatch="2017-06-27T18:54:50.48" logint="2017-06-27T18:54:50.48" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_Demo">
+          <SQLInput>BBInfinity_Demo.dbo.USP_QUERYVIEW_GETMETADATA;1</SQLInput>
+        </C>
+        <C server="(local)" SPID="66" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:41.51" logint="2017-06-27T18:54:41.507" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>(@key nvarchar(4000),@from float,@to float)select top 1 Value from [HangFire].[Set] with (readcommittedlock) where [Key] = @key and Score between @from and @to order by Score</SQLInput>
+        </C>
+        <C server="(local)" SPID="67" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:40.633" logint="2017-06-27T18:54:40.63" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>(@queues1 nvarchar(4000),@timeout float)delete top (1) from [HangFire].JobQueue with (readpast, updlock, rowlock)
+output DELETED.Id, DELETED.JobId, DELETED.Queue
+where (FetchedAt is null or FetchedAt &lt; DATEADD(second, @timeout, GETUTCDATE()))
+and Queue in (@queues1)</SQLInput>
+        </C>
+        <C server="(local)" SPID="68" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname="Blackbaud App Server" lbatch="2017-06-27T18:54:39.123" logint="2017-06-27T18:54:39.047" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>BBInfinity_CRM_Integration.dbo.USP_DATALIST_BUSINESSPROCESSES_SCHEDULEDTORUN;1</SQLInput>
+        </C>
+        <C server="(local)" SPID="69" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:40.633" logint="2017-06-27T18:54:40.63" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>(@queues1 nvarchar(4000),@timeout float)delete top (1) from [HangFire].JobQueue with (readpast, updlock, rowlock)
+output DELETED.Id, DELETED.JobId, DELETED.Queue
+where (FetchedAt is null or FetchedAt &lt; DATEADD(second, @timeout, GETUTCDATE()))
+and Queue in (@queues1)</SQLInput>
+        </C>
+        <C server="(local)" SPID="70" t="2017-06-27T18:54:50.49" host="CHS6DAVIDHEN02" ntuser="bbappfx" login="IIS APPPOOL\bbappfx" pname=".Net SqlClient Data Provider" lbatch="2017-06-27T18:54:40.633" logint="2017-06-27T18:54:40.63" lwt="MISCELLANEOUS" myid="64" dbname="BBInfinity_CRM_Integration">
+          <SQLInput>(@queues1 nvarchar(4000),@timeout float)delete top (1) from [HangFire].JobQueue with (readpast, updlock, rowlock)
+output DELETED.Id, DELETED.JobId, DELETED.Queue
+where (FetchedAt is null or FetchedAt &lt; DATEADD(second, @timeout, GETUTCDATE()))
+and Queue in (@queues1)</SQLInput>
+        </C>
+        <C server="(local)" SPID="72" t="2017-06-27T18:54:50.493" host="CHS6DAVIDHEN02" ntuser="DavidHe" login="BLACKBAUD\DavidHe" pname="Microsoft SQL Server Management Studio" lbatch="2017-06-27T18:44:20.963" logint="2017-06-27T12:56:01.577" lwt="MISCELLANEOUS" myid="64" dbname="master">
+          <SQLInput>use [master]</SQLInput>
+        </C>
+        <C server="(local)" SPID="73" t="2017-06-27T18:54:50.493" host="CHS6DAVIDHEN02" ntuser="NETWORK SERVICE" login="NT AUTHORITY\NETWORK SERVICE" pname="Report Server" lbatch="2017-06-27T18:54:42.35" logint="2017-06-27T18:54:42.337" lwt="MISCELLANEOUS" myid="64" dbname="ReportServer">
+          <SQLInput>
+                                    declare @BatchID uniqueidentifier
+
+                                    set @BatchID = newid()
+
+                                    UPDATE [Notifications] WITH (TABLOCKX)
+                                        SET [BatchID] = @BatchID,
+                                        [ProcessStart] = GETUTCDATE(),
+                                        [ProcessHeartbeat] = GETUTCDATE()
+                                    FROM (
+                                        SELECT TOP 8  [NotificationID] FROM [Notifications] WITH (TABLOCKX) WHERE ProcessStart is NULL and
+	                                    (ProcessAfter is NULL or ProcessAfter &lt; GETUTCDATE()) ORDER BY [NotificationEntered]
+                                    ) AS t1
+                                    WHERE [Notifications].[NotificationID] = t1.[NotificationID]
+
+                                    select top 8
+		                                    -- Notification data
+		                                    N.[NotificationID],
+		                                    N.[SubscriptionID],
+		                                    N.[ActivationID],
+		                                    N.[ReportID],
+		                                    N.[SnapShotDate],
+		                                    N.[DeliveryExtension],
+		                                    N.[ExtensionSettings],
+                                            N.[Locale],
+		                                    N.[Parameters],
+		                                    N.[SubscriptionLastRunTime],
+		                                    N.[ProcessStart],
+		                                    N.[NotificationEntered],
+		                                    N.[Attempt],
+		                                    N.[IsDataDriven],
+		                                    SUSER_SNAME(Owner.[Sid]),
+		                                    Owner.[UserName],
+		                                    -- Report Data
+		                                    O.[Path],
+		                                    N.[ReportZone],
+		                                    O.[Type],
+		                                    SD.NtSecDescPrimary,
+                                            N.[Version],
+                                            Owner.[AuthType]
+	                                    from 
+		                                    [Notifications] N with (TABLOCKX) inner join [Catalog] O on O.[ItemID] = N.[ReportID]
+		                                    inner join [Users] Owner on N.SubscriptionOwnerID = Owner.UserID
+		                                    left outer join [SecData] SD on O.[PolicyID] = SD.[PolicyID] AND SD.AuthType = Owner.AuthType
+	                                    where 
+		                                    N.[BatchID] = @BatchID
+                                    ORDER BY [NotificationEntered]
+</SQLInput>
+        </C>
+      </SnapShots>
+    </S>
+  </SnapList>
+</SnapLog>
