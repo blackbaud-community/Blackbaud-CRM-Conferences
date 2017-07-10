@@ -1,0 +1,56 @@
+﻿<SQLStoredProcedureSpec
+	xmlns="bb_appfx_sqlstoredprocedure"
+	xmlns:c="bb_appfx_commontypes" 
+	ID="D6F3B9D7-F895-47B0-BD39-58C85D53EA43"
+	Name="USR_USP_GETATTRIBUTEVALUEANDTRANSLATION"
+	Description="Retrieves the values and translations (if applicable) of an attribute given the name and record type name.  Value and translation will be returned as nvarchar(max)."
+	Author="Blackbaud Professional Services"
+	SPName="USR_USP_GETATTRIBUTEVALUESANDTRANSLATIONS"
+	>
+
+	<CreateProcedureSQL>
+		<![CDATA[
+create procedure dbo.USR_USP_GETATTRIBUTEVALUESANDTRANSLATIONS
+(
+     @RECORDTYPE_NAME nvarchar(200)    --------- = 'Planned Gift'
+    ,@ATTRIBUTE_NAME nvarchar(200)-------------- = 'Status'
+)
+as
+begin
+    declare @ATTRIBUTETABLENAME nvarchar(300)
+    declare @ATTRIBUTECODETABLENAME nvarchar(300)
+    declare @ATTRIBUTEVALUE_COLUMNNAME nvarchar(300)
+    declare @ATTRIBUTE_IDCOLUMNNAME nvarchar(10)
+    declare @ATTRIBUTEVALUE_XLATE nvarchar(100)
+
+    select 
+           @ATTRIBUTETABLENAME=TC.TABLENAME
+          ,@ATTRIBUTECODETABLENAME=CTC.DBTABLENAME 
+	      ,@ATTRIBUTE_IDCOLUMNNAME= case when AC.ONLYALLOWONEPERRECORD = 1 then 'ID' else 'PARENTID' end
+          ,@ATTRIBUTEVALUE_COLUMNNAME= case when AC.DATATYPECODE = '4' then 'BOOLEANCODE'
+										    when AC.DATATYPECODE = '5'  then CTC.DBTABLENAME + 'ID'
+										    when AC.DATATYPECODE = '6' then 'CONSTITUENTVALUEID'
+										    else 'VALUE'
+								       end
+          ,@ATTRIBUTEVALUE_XLATE= case when AC.DATATYPECODE = '4' then 'BOOLEANCODE'
+	                                     when AC.DATATYPECODE = '5' then '(select DESCRIPTION from '+CTC.DBTABLENAME+' where ID = ' + CTC.DBTABLENAME + 'ID'+')'
+									     when AC.DATATYPECODE = '6' then '(select NAME from dbo.CONSTITUENT where ID = CONSTITUENTVALUEID)'
+                                         else 'VALUE'
+							        end
+    from ATTRIBUTECATEGORY AC
+         inner join ATTRIBUTERECORDTYPE ART on AC.ATTRIBUTERECORDTYPEID = ART.ID
+	     inner join RECORDTYPE RT on ART.RECORDTYPEID = RT.ID
+	     inner join TABLECATALOG TC on AC.TABLECATALOGID = TC.ID
+	     left join CODETABLECATALOG CTC on AC.CODETABLECATALOGID = CTC.ID
+    where RT.NAME = @RECORDTYPE_NAME
+    and AC.NAME = @ATTRIBUTE_NAME
+    
+    declare @sql nvarchar(max);
+    set @sql = 'select ' + @ATTRIBUTE_IDCOLUMNNAME + ',' + @ATTRIBUTEVALUE_COLUMNNAME + ',' + @ATTRIBUTEVALUE_XLATE + ' from ' + @ATTRIBUTETABLENAME
+    exec sp_executesql @sql
+    
+end
+		]]>
+	</CreateProcedureSQL>
+
+</SQLStoredProcedureSpec>

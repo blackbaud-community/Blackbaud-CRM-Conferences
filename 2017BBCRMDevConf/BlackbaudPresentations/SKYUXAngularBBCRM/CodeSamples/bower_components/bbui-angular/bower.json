@@ -1,0 +1,17 @@
+{
+  "name": "bbui-angular",
+  "version": "1.0.6",
+  "homepage": "https://github.com/blackbaud/bbui-angular",
+  "authors": [
+    "Paul Crowder <paul.crowder@blackbaud.com>",
+    "Christi Viets <christine.viets@blackbaud.com>",
+    "Scott Freeman <gerald.freeman@blackbaud.com>"
+  ],
+  "description": "A portion of the Infinity BBUI API ported to Angular services.",
+  "ignore": [
+    ".*",
+    "gruntfile.js",
+    "src/",
+    "test/"
+  ]
+}

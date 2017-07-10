@@ -1,0 +1,88 @@
+﻿<SQLStoredProcedureSpec
+	xmlns="bb_appfx_sqlstoredprocedure"
+	xmlns:c="bb_appfx_commontypes" 
+	ID="a363cbbd-7b89-401e-ace4-73465674049f"
+	Name="USR_USP_UPSERT_ATTRIBUTEVALUE"
+	Description="REPLACE_WITH_DESCRIPTION"
+	Author="Blackbaud Professional Services"
+	SPName="USR_USP_UPSERT_ATTRIBUTEVALUE"
+    GrantServiceRolePermission="true"
+	>
+
+	<CreateProcedureSQL>
+		<![CDATA[
+create procedure dbo.USR_USP_UPSERT_ATTRIBUTEVALUE
+(
+     @RECORDTYPE_NAME nvarchar(200)    --------- = 'Constituent'
+    ,@ATTRIBUTE_NAME nvarchar(200)-------------- = 'Demo1'
+    ,@ID uniqueidentifier----------------------- = '<guid>'
+    ,@ATTRIBUTE_VALUE nvarchar(max)
+
+)
+as
+begin
+
+    set nocount on;
+
+	declare @ATTRIBUTETABLENAME nvarchar(300)
+    declare @ATTRIBUTECODETABLENAME nvarchar(300)
+    declare @ATTRIBUTEVALUE_COLUMNNAME nvarchar(300)
+    declare @ATTRIBUTE_IDCOLUMNNAME nvarchar(10)
+    declare @ATTRIBUTEVALUE_XLATE nvarchar(100)
+    declare @ONLYALLOWONE bit
+    declare @ATTRIBUTE_DATATYPE nvarchar(max)
+    declare @CHANGEAGENTID uniqueidentifier
+    exec dbo.USP_CHANGEAGENT_GETORCREATECHANGEAGENT @CHANGEAGENTID output
+
+    select 
+           @ONLYALLOWONE=AC.ONLYALLOWONEPERRECORD
+          ,@ATTRIBUTETABLENAME=TC.TABLENAME
+          ,@ATTRIBUTECODETABLENAME=CTC.DBTABLENAME 
+	      ,@ATTRIBUTE_IDCOLUMNNAME= case when AC.ONLYALLOWONEPERRECORD = 1 then 'ID' else 'PARENTID' end
+          ,@ATTRIBUTEVALUE_COLUMNNAME= case when AC.DATATYPECODE = '4' then 'BOOLEANCODE'
+										    when AC.DATATYPECODE = '5'  then CTC.DBTABLENAME + 'ID'
+										    when AC.DATATYPECODE = '6' then 'CONSTITUENTVALUEID'
+										    else 'VALUE'
+								       end
+          ,@ATTRIBUTEVALUE_XLATE= case when AC.DATATYPECODE = '4' then 'BOOLEANCODE'
+	                                     when AC.DATATYPECODE = '5' then '(select DESCRIPTION from '+CTC.DBTABLENAME+' where ID = ' + CTC.DBTABLENAME + 'ID'+')'
+									     when AC.DATATYPECODE = '6' then '(select NAME from dbo.CONSTITUENT where ID = CONSTITUENTVALUEID)'
+                                         else 'VALUE'
+							        end
+          ,@ATTRIBUTE_DATATYPE= case     when AC.DATATYPECODE = '0' then 'nvarchar(max)'
+                                         when AC.DATATYPECODE = '1' then 'int'
+                                         when AC.DATATYPECODE = '2' then 'datetime'
+                                         when AC.DATATYPECODE = '3' then 'money'
+                                         when AC.DATATYPECODE = '4' then 'bit'
+	                                     when AC.DATATYPECODE = '5' then 'uniqueidentifier'
+									     when AC.DATATYPECODE = '6' then 'uniqueidentifier'
+                                         when AC.DATATYPECODE = '7' then 'UDT_FUZZYDATE'
+                                         when AC.DATATYPECODE = '8' then 'UDT_HOURMINUTE'
+                                         when AC.DATATYPECODE = '9' then 'nvarchar(max)'
+                                         else 'nvarchar(max)'
+							        end                                    
+    from ATTRIBUTECATEGORY AC
+         inner join ATTRIBUTERECORDTYPE ART on AC.ATTRIBUTERECORDTYPEID = ART.ID
+	     inner join RECORDTYPE RT on ART.RECORDTYPEID = RT.ID
+	     inner join TABLECATALOG TC on AC.TABLECATALOGID = TC.ID
+	     left join CODETABLECATALOG CTC on AC.CODETABLECATALOGID = CTC.ID
+    where RT.NAME = @RECORDTYPE_NAME
+    and AC.NAME = @ATTRIBUTE_NAME
+    
+    if @ONLYALLOWONE = 1
+    begin
+        declare @sql nvarchar(max);
+        set @sql =  'if exists (select 1 from ' + @ATTRIBUTETABLENAME + ' where ' + @ATTRIBUTE_IDCOLUMNNAME + ' = ''' +  CAST(@ID as nvarchar(36)) + ''')' 
+           + ' update ' + @ATTRIBUTETABLENAME + ' set ' + @ATTRIBUTEVALUE_COLUMNNAME + ' = CAST(''' + @ATTRIBUTE_VALUE + ''' as ' +  @ATTRIBUTE_DATATYPE + ') where ' + @ATTRIBUTE_IDCOLUMNNAME + ' = ''' +  CAST(@ID as nvarchar(36)) + ''''
+		   + ' else insert into ' + @ATTRIBUTETABLENAME + '(ID,COMMENT,STARTDATE,ENDDATE,ADDEDBYID,CHANGEDBYID,DATEADDED,DATECHANGED,'+ @ATTRIBUTEVALUE_COLUMNNAME + ') values ('''+CAST(@ID as nvarchar(36))+''''+','''',null,null,@CHANGEAGENTID, @CHANGEAGENTID,getdate(),getdate(),CAST(''' + @ATTRIBUTE_VALUE + ''' as ' +  @ATTRIBUTE_DATATYPE + ')' + ')'
+           select @sql
+        exec sp_executesql @sql, N'@CHANGEAGENTID uniqueidentifier', @CHANGEAGENTID
+    end
+    
+end
+		]]>
+	</CreateProcedureSQL>
+    <GrantPermissionToDatabaseRoles>
+        <c:DatabaseRole>BBAPPFXSERVICEROLE</c:DatabaseRole>
+    </GrantPermissionToDatabaseRoles>
+</SQLStoredProcedureSpec>

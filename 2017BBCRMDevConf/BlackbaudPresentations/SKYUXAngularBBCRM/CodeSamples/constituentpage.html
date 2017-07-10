@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html charset="utf-8" ng-app="skytutorial" ng-controller="MainController as mainCtrl">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>2017 Dev Con</title>
+  <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.6/css/sky-bundle.css" integrity="sha384-0qQTcXi3TFJvyqm3IBveZiYW0GHbY8LuphtukDr6FkZdy6FEXIHdQ6yF6Z3GUbvK" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-cloak>
+  <div ng-if="sessionInfo">
+  <div ng-controller="ConstituentController as constitCtrl"  bb-wait="loading">
+    <bb-page-summary>
+      <bb-page-summary-image>
+        <bb-avatar
+          bb-avatar-src="constitCtrl.constituent.profileimage"
+          bb-avatar-name="constitCtrl.constituent.name">
+        </bb-avatar>
+      </bb-page-summary-image>
+      <bb-page-summary-title>
+        {{constitCtrl.constituent.name}}
+      </bb-page-summary-title>
+      <bb-page-summary-subtitle>
+        {{constitCtrl.constituent.title}}, {{constitCtrl.constituent.company}}
+      </bb-page-summary-subtitle>
+      <bb-page-summary-content>
+        {{constitCtrl.constituent.alert}}
+      </bb-page-summary-content>
+    </bb-page-summary>
+<div class="container-fluid">
+  <div class="row bb-page-content-multicolumn">
+    <div class="col-md-6 bb-page-content-tile-column">
+      <bb-tile bb-tile-header="'Personal information'">
+        <div bb-tile-section>
+            <h4>Address</h4>
+            {{constitCtrl.constituent.primaryaddress}}
+            <br />
+            {{constitCtrl.constituent.city}} {{constitCtrl.constituent.postcode}}
+
+            <h4>Phone</h4>
+            {{constitCtrl.constituent.phone}}
+
+            <h4>Email</h4>
+            {{constitCtrl.constituent.email}}
+        </div>
+      </bb-tile>
+    </div>
+    <div class="col-md-6 bb-page-content-tile-column" ng-controller="RevenueController as revenueCtrl"  bb-wait="loading" >
+      <bb-tile bb-tile-header="'Latest gifts'">
+        <div bb-tile-section>
+            <bb-repeater>
+              <bb-repeater-item ng-repeat="item in revenueCtrl.revenueList" bb-repeater-item-expanded="item.expanded" >
+                <bb-repeater-item-title>
+                  <div class="pull-left">
+                    ${{item.amount}}
+                  </div>
+                  <div class="pull-right">
+                    <span class="bb-field-label">{{item.date}}</span>
+                  </div>
+                </bb-repeater-item-title>
+                <bb-repeater-item-content>
+                  <div>
+                    {{item.detail}}
+                  </div>
+                </bb-repeater-item-content>
+              </bb-repeater-item>
+            </bb-repeater>
+        </div>
+      </bb-tile>
+    </div>
+  </div>
+
+</div>
+  <script src="https://sky.blackbaudcdn.net/skyux/1.6.6/js/sky-bundle.min.js" integrity="sha384-DD+Y69jYPzp2eVhGSZyfXyW+TxZpImxAF4T16WyV4YVpycGhkUVzOiCE0jKscve/" crossorigin="anonymous"></script>
+  <script src="bower_components/bbui-angular/dist/js/bbui.js"></script>
+  <script src="index.js"></script>
+  <script src="constituent.controller.js"></script>
+  <script src="revenue.controller.js"></script>
+</body>
+
+</html>

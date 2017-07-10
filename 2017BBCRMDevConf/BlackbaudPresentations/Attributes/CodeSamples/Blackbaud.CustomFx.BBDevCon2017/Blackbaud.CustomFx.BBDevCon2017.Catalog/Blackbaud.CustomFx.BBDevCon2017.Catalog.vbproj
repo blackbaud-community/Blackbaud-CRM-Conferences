@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C09A7A36-F49F-48FD-8A8F-798C0EB2E1DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Blackbaud.CustomFx.BBDevCon2017.Catalog</RootNamespace>
+    <AssemblyName>Blackbaud.CustomFx.BBDevCon2017.Catalog</AssemblyName>
+    <MyType>Windows</MyType>
+    <OptionStrict>Off</OptionStrict>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\bbec\installs\BBDEVCON\bbappfx\vroot\bin\custom\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>Catalog.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>D:\bbec\installs\BBDEVCON\bbappfx\vroot\bin\custom</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>Catalog.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Blackbaud.AppFx.Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Blackbaud.AppFx.XmlTypes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Demo1\SQL\PostLoad\" />
+    <Folder Include="Demo1\SQL\PreLoad\" />
+    <Folder Include="Demo2\SQL\PostLoad\" />
+    <Folder Include="Demo3\SQL\PostLoad\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Catalog.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WorkSQL\AfterAttributeCreateDemo.sql" />
+    <Content Include="WorkSQL\DEMO_CREATE_ALL_ATTRIBUTES.SQL" />
+    <EmbeddedResource Include="Demo3\Packages\BBDEVCON Attribute Demo 3.Package.xml" />
+    <EmbeddedResource Include="Demo3\Data Forms\Edit Extensions\Demo3_ConstituentEditPersonalInformation.Extension.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Demo3\SQL\PreLoad\CreateSynonym_USR_SYN_CONSTITUENT_DEMO3DATE.sql" />
+    <EmbeddedResource Include="Demo2\Packages\BBDEVCON Attribute Demo 2.Package.xml" />
+    <EmbeddedResource Include="Demo2\Data Forms\Edit Extensions\Demo2_ConstituentEditPersonalInformation.Extension.xml" />
+    <EmbeddedResource Include="Demo1\Data Forms\Edit Extensions\Demo1_ConstituentEditPersonalInformation.Extension.xml" />
+    <EmbeddedResource Include="Demo1\Packages\BBDEVCON Attribute Demo 1.Package.xml" />
+    <Content Include="Demo1\README.txt" />
+    <Content Include="Demo2\README.txt" />
+    <Content Include="Demo2\SQL\PreLoad\COMMON_CREATEATTRIBUTES.SQL" />
+    <Content Include="Demo3\README.txt" />
+    <Content Include="Demo3\SQL\PreLoad\CreateSynonyms.sql" />
+    <Content Include="Demo3\SQL\PreLoad\CreateSynonym_USR_SYN_CONSTITUENT_DEMO3TEXT.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

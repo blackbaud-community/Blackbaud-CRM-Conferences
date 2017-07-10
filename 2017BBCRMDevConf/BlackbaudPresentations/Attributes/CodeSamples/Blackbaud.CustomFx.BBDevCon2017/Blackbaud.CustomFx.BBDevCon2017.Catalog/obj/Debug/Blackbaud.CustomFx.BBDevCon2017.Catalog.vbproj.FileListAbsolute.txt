@@ -1,0 +1,8 @@
+C:\bin\debug\Blackbaud.CustomFx.BBDevCon2017.Catalog.dll
+C:\bin\debug\Blackbaud.CustomFx.BBDevCon2017.Catalog.pdb
+D:\vsprojects\BBDEVCON\Blackbaud.CustomFx.BBDevCon2017\Blackbaud.CustomFx.BBDevCon2017.Catalog\obj\Debug\Blackbaud.CustomFx.BBDevCon2017.Catalog.dll
+D:\vsprojects\BBDEVCON\Blackbaud.CustomFx.BBDevCon2017\Blackbaud.CustomFx.BBDevCon2017.Catalog\obj\Debug\Blackbaud.CustomFx.BBDevCon2017.Catalog.pdb
+D:\vsprojects\BBDEVCON\Blackbaud.CustomFx.BBDevCon2017\Blackbaud.CustomFx.BBDevCon2017.Catalog\bin\debug\Blackbaud.CustomFx.BBDevCon2017.Catalog.dll
+D:\vsprojects\BBDEVCON\Blackbaud.CustomFx.BBDevCon2017\Blackbaud.CustomFx.BBDevCon2017.Catalog\bin\debug\Blackbaud.CustomFx.BBDevCon2017.Catalog.pdb
+D:\bbec\installs\BBDEVCON\bbappfx\vroot\bin\custom\Blackbaud.CustomFx.BBDevCon2017.Catalog.dll
+D:\bbec\installs\BBDEVCON\bbappfx\vroot\bin\custom\Blackbaud.CustomFx.BBDevCon2017.Catalog.pdb

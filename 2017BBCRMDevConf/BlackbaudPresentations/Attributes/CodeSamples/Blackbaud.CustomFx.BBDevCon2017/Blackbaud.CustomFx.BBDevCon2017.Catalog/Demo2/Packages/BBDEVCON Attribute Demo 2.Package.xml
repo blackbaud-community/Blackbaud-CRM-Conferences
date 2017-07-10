@@ -1,0 +1,15 @@
+<PackageSpec 
+    xmlns="bb_appfx_package"
+    xmlns:c="bb_appfx_commontypes"
+    ID="c1a2cfb9-dbaa-48b6-a49f-055c320c0225"
+	Name="BBDEVCON Attribute Demo 2 Package"
+	Description="BBDEVCON Attribute Demo 2 Package"
+    Author="Blackbaud Professional Services"
+    >
+
+	
+	<c:DependencyList>
+        <c:Dependency CatalogAssembly="Blackbaud.CustomFx.BBDevCon2017.Catalog.dll" CatalogItem="Blackbaud.CustomFx.BBDevCon2017.Catalog.Demo2_ConstituentEditPersonalInformation.Extension.xml" />
+    </c:DependencyList>
+
+</PackageSpec>

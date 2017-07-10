@@ -1,0 +1,1 @@
+select * from dbo.PAGEDEFINITIONCATALOG where NAME = 'Constituent Page'

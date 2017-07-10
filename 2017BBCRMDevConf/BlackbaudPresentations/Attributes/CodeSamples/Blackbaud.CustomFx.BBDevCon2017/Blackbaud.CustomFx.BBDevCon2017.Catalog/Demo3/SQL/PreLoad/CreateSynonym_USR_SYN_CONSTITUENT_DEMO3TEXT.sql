@@ -1,0 +1,22 @@
+﻿
+declare @ATTRIBUTENAME nvarchar(200) = 'DEMO3TEXT'
+declare @ATTRIBUTETABLENAME nvarchar(200)
+
+select @ATTRIBUTETABLENAME = TC.TABLENAME
+from ATTRIBUTECATEGORY AC inner join TABLECATALOG TC on AC.TABLECATALOGID = TC.ID
+where AC.NAME = @ATTRIBUTENAME
+
+if exists (select top 1 1 from sys.all_objects where name = 'USR_SYN_CONSTITUENT_DEMO3TEXT' and type_desc = 'SYNONYM')
+    drop synonym USR_SYN_CONSTITUENT_DEMO3TEXT
+
+exec('CREATE SYNONYM USR_SYN_CONSTITUENT_DEMO3TEXT FOR ' + @ATTRIBUTETABLENAME)
+
+
+
+
+
+
+
+
+
+
