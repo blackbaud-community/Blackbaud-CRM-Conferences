@@ -8,11 +8,11 @@ Kevin McDearis - Executive Vice President and Chief Products Officer
 Welcome to the 6th annual Blackbaud CRM Developers Conference! Join us as we kick off the event with a message from Blackbaud's Chief Products Officer.
 
 ### The Blackbaud Bulk Import Service ###
-Todd Yellin - Senior Staff Software Engineer
+Todd Yellin - Senior Principal Software Engineer
 We will review the features and architecture of Blackbaud's new bulk import service. As our Customer Technical Preview (CTP) nears completion, we'll discuss customer outcomes and lessons learned. We'll also provide some details about our guided rollout program. As time allows, we will look at the future direction of the service and some upcoming enhancements.
 
 ### Front End Customization in BBIS (Not Yet Available) ###
-J Schultz - Web Developer, Team Lead
+J Schultz, Team Lead, Developer
 
 Using only the tools provided to content editors, we can create immersive, impressive, and interactive customizations in Blackbaud Internet Solutions. This session will highlight the tools available to you right out of the box, which allow you to extend the functional and visual landscape of a Blackbaud Internet Solutions website. We will cover the API, unformatted text parts, and custom content parts with living examples of what can be done.
 
@@ -33,9 +33,9 @@ Matt Crawford - Senior Product Manager
 Matt Crawford will talk about Blackbaud CRM themes and the Developer Support Team roadmap.
 
 ### Know Your Developer Resources ###
-Darryl Eychner - Staff Software Engineer
-David Hendershot - Staff Software Engineer
-Patton Hilliard - Staff Software Engineer
+Darryl Eychner - Principal Software Engineer
+David Hendershot - Principal Software Engineer
+Patton Hilliard - Principal Software Engineer
 
 Are you familiar with the Developer Discussions, developer documentation, and code repository? Come get a tour of existing resources and see what improvements we're making. We'll introduce documentation updates as well as new and upcoming code samples. Share with us what you'd most like to see next!
 
@@ -93,7 +93,7 @@ Our presenters from Omatic Software will walk through how the ***Blackbaud CRM**
 
 ### Graduway and Blackbaud CRM Integration ###
 David Tenne - Chief Technology Officer, Graduway
-Bill Walsh - Principal Architect and Chief Technology Evangelist, Blackbaud
+Bill Walsh - Principal Solutions Architect, Blackbaud
 
 Learn how Graduway built a tightly coupled integration to Blackbaud CRM using open web APIs and learned lessons, along with tips and tricks for third-party integrations.
 
