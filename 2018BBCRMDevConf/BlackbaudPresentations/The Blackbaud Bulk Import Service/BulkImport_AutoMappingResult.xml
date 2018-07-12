@@ -1,0 +1,175 @@
+﻿<ImportDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="TestImportDefinition" InputType="DelimitedFile" xmlns="http://www.blackbaud.com/Import/Mapping/ImportDefinition">
+  <DelimitedFile HasRowHeader="true" />
+  <RecordFormats>
+    <RecordFormat>
+      <FileFields>
+        <FileField Name="constituent_type" />
+        <FileField Name="title" />
+        <FileField Name="first_name" />
+        <FileField Name="middle_name" />
+        <FileField Name="last_name" />
+        <FileField Name="suffix" />
+        <FileField Name="birthdate" />
+        <FileField Name="gender" />
+        <FileField Name="country1" />
+        <FileField Name="address1" />
+        <FileField Name="city1" />
+        <FileField Name="state1" />
+        <FileField Name="zip1" />
+        <FileField Name="country2" />
+        <FileField Name="address2" />
+        <FileField Name="city2" />
+        <FileField Name="state2" />
+        <FileField Name="zip2" />
+        <FileField Name="phone_type_1" />
+        <FileField Name="phone_number_1" />
+        <FileField Name="phone_type_2" />
+        <FileField Name="phone_number_2" />
+        <FileField Name="email" />
+        <FileField Name="email_start_date" />
+        <FileField Name="email_end_date" />
+        <FileField Name="contact_code" />
+        <FileField Name="spouse_title" />
+        <FileField Name="spouse_first" />
+        <FileField Name="spouse_middle" />
+        <FileField Name="spouse_last" />
+        <FileField Name="spouse_suffix" />
+        <FileField Name="spouse_birthdate" />
+        <FileField Name="spouse_gender" />
+      </FileFields>
+      <EntityMappings>
+        <EntityMappingSet Name="Constituent1" EntityType="Constituent">
+          <EntityMappings>
+            <EntityMapping Name="Individual1" EntityType="Individual">
+              <ImportFilter Language="CSHARP">
+                <Parameters>
+                  <Parameter Name="constituent_type" Value="constituent_type" />
+                </Parameters>
+                <Code>return constituent_type == "Individual";</Code>
+              </ImportFilter>
+              <EntityFieldMappings>
+                <EntityFieldMapping EntityFieldName="TitleCodeId" MappingType="Lookup" FileField="title" />
+                <EntityFieldMapping EntityFieldName="FirstName" MappingType="DirectMapping" FileField="first_name" />
+                <EntityFieldMapping EntityFieldName="MiddleName" MappingType="DirectMapping" FileField="middle_name" />
+                <EntityFieldMapping EntityFieldName="LastName" MappingType="DirectMapping" FileField="last_name" />
+                <EntityFieldMapping EntityFieldName="SuffixCodeId" MappingType="Lookup" FileField="suffix" />
+                <EntityFieldMapping EntityFieldName="Birthday" MappingType="DirectMapping" FileField="birthdate" />
+                <EntityFieldMapping EntityFieldName="GenderCode" MappingType="Enumeration" FileField="gender">
+                  <EnumValueMappings>
+                    <EnumValueMapping SourceValue="M" TargetValue="**TODO**" />
+                    <EnumValueMapping SourceValue="F" TargetValue="**TODO**" />
+                  </EnumValueMappings>
+                </EntityFieldMapping>
+              </EntityFieldMappings>
+            </EntityMapping>
+            <EntityMapping Name="Organization1" EntityType="Organization">
+              <ImportFilter Language="CSHARP">
+                <Parameters>
+                  <Parameter Name="constituent_type" Value="constituent_type" />
+                </Parameters>
+                <Code>return constituent_type == "Organization";</Code>
+              </ImportFilter>
+              <EntityFieldMappings>
+                <EntityFieldMapping EntityFieldName="Name" MappingType="DirectValue" Value="**TODO**" />
+              </EntityFieldMappings>
+            </EntityMapping>
+          </EntityMappings>
+        </EntityMappingSet>
+        <EntityMapping Name="Address1" EntityType="Address">
+          <EntityFieldMappings>
+            <EntityFieldMapping EntityFieldName="ConstituentId" MappingType="EntityReference">
+              <EntityMappingReference EntityMappingName="Constituent1" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="CountryId" MappingType="Lookup" FileField="country1">
+              <LookupMapping LookupName="**TODO**" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="AddressBlock" MappingType="DirectMapping" FileField="address1" />
+            <EntityFieldMapping EntityFieldName="City" MappingType="DirectMapping" FileField="city1" />
+            <EntityFieldMapping EntityFieldName="StateId" MappingType="Lookup" FileField="state1">
+              <LookupMapping LookupName="**TODO**" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="PostCode" MappingType="DirectMapping" FileField="zip1" />
+          </EntityFieldMappings>
+        </EntityMapping>
+        <EntityMapping Name="Address2" EntityType="Address" MappingType="Optional">
+          <EntityFieldMappings>
+            <EntityFieldMapping EntityFieldName="ConstituentId" MappingType="EntityReference">
+              <EntityMappingReference EntityMappingName="Constituent1" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="CountryId" MappingType="Lookup" FileField="country2">
+              <LookupMapping LookupName="**TODO**" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="AddressBlock" MappingType="DirectMapping" FileField="address2" />
+            <EntityFieldMapping EntityFieldName="City" MappingType="DirectMapping" FileField="city2" />
+            <EntityFieldMapping EntityFieldName="StateId" MappingType="Lookup" FileField="state2">
+              <LookupMapping LookupName="**TODO**" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="PostCode" MappingType="DirectMapping" FileField="zip2" />
+          </EntityFieldMappings>
+        </EntityMapping>
+        <EntityMapping Name="Phone1" EntityType="Phone">
+          <EntityFieldMappings>
+            <EntityFieldMapping EntityFieldName="ConstituentId" MappingType="EntityReference">
+              <EntityMappingReference EntityMappingName="Constituent1" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="CountryId" MappingType="Lookup" FileField="country1">
+              <LookupMapping LookupName="**TODO**" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="PhoneTypeCodeId" MappingType="Lookup" FileField="phone_type_1" />
+            <EntityFieldMapping EntityFieldName="Number" MappingType="DirectMapping" FileField="phone_number_1" />
+          </EntityFieldMappings>
+        </EntityMapping>
+        <EntityMapping Name="Phone2" EntityType="Phone" MappingType="Optional">
+          <EntityFieldMappings>
+            <EntityFieldMapping EntityFieldName="ConstituentId" MappingType="EntityReference">
+              <EntityMappingReference EntityMappingName="Constituent1" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="CountryId" MappingType="Lookup" FileField="country2">
+              <LookupMapping LookupName="**TODO**" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="PhoneTypeCodeId" MappingType="Lookup" FileField="phone_type_2" />
+            <EntityFieldMapping EntityFieldName="Number" MappingType="DirectMapping" FileField="phone_number_2" />
+          </EntityFieldMappings>
+        </EntityMapping>
+        <EntityMapping Name="Email1" EntityType="Email">
+          <EntityFieldMappings>
+            <EntityFieldMapping EntityFieldName="ConstituentId" MappingType="EntityReference">
+              <EntityMappingReference EntityMappingName="Constituent1" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="EmailAddress" MappingType="DirectMapping" FileField="email" />
+            <EntityFieldMapping EntityFieldName="StartDate" MappingType="DirectMapping" FileField="email_start_date">
+              <DateTimeFormat DateTimeFormatType="Exact" FormatString="M/d/yy" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="EndDate" MappingType="DirectMapping" FileField="email_end_date">
+              <DateTimeFormat DateTimeFormatType="Exact" FormatString="yyyy-MM-dd" />
+            </EntityFieldMapping>
+          </EntityFieldMappings>
+        </EntityMapping>
+        <EntityMapping Name="Spouse" EntityType="Individual" MappingType="Optional">
+          <EntityFieldMappings>
+            <EntityFieldMapping EntityFieldName="TitleCodeId" MappingType="Lookup" FileField="spouse_title" />
+            <EntityFieldMapping EntityFieldName="FirstName" MappingType="DirectMapping" FileField="spouse_first" />
+            <EntityFieldMapping EntityFieldName="MiddleName" MappingType="DirectMapping" FileField="spouse_middle" />
+            <EntityFieldMapping EntityFieldName="LastName" MappingType="DirectMapping" FileField="spouse_last" />
+            <EntityFieldMapping EntityFieldName="SuffixCodeId" MappingType="Lookup" FileField="spouse_suffix" />
+            <EntityFieldMapping EntityFieldName="Birthday" MappingType="DirectMapping" FileField="spouse_birthdate" />
+            <EntityFieldMapping EntityFieldName="GenderCode" MappingType="DirectMapping" FileField="spouse_gender" />
+          </EntityFieldMappings>
+        </EntityMapping>
+        <EntityMapping Name="SpouseRelationship" EntityType="IndividualToIndividualRelationship">
+          <EntityFieldMappings>
+            <EntityFieldMapping EntityFieldName="RelationshipConstituentId" MappingType="EntityReference">
+              <EntityMappingReference EntityMappingName="Individual1" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="ReciprocalConstituentId" MappingType="EntityReference">
+              <EntityMappingReference EntityMappingName="Spouse" />
+            </EntityFieldMapping>
+            <EntityFieldMapping EntityFieldName="IsSpouse" MappingType="DirectValue" Value="True" />
+            <EntityFieldMapping EntityFieldName="RelationshipTypeCodeId" MappingType="DirectValue" Value="**TODO**" />
+            <EntityFieldMapping EntityFieldName="ReciprocalTypeCodeId" MappingType="DirectValue" Value="**TODO**" />
+          </EntityFieldMappings>
+        </EntityMapping>
+      </EntityMappings>
+    </RecordFormat>
+  </RecordFormats>
+</ImportDefinition>

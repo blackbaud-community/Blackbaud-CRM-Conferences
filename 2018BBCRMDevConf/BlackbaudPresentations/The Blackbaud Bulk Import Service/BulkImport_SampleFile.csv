@@ -1,0 +1,4 @@
+﻿constituent_type,title,first_name,middle_name,last_name,suffix,birthdate,gender,country1,address1,city1,state1,zip1,country2,address2,city2,state2,zip2,phone_type_1,phone_number_1,phone_type_2,phone_number_2,email,email_start_date,email_end_date,contact_code,spouse_title,spouse_first,spouse_middle,spouse_last,spouse_suffix,spouse_birthdate,spouse_gender
+Individual,Mr.,John,A.,Smith,Jr.,4/1/70,M,United States,55 Main St,Houston,TX,77005,,,,,,Home,713-864-9952,Work,508-225-9142,jsmith@gmail.com,10/5/10,2015-07-01,,Mrs.,Jane,,Smith,,19690110,2
+Individual,,Mary,,McFarlane,,,F,United States,19 Midway Lane,Cambridge,MA,02134,,,,,,Home,617-522-1760,,,mmc@hotmail.com,,,,,,,,,,
+Organization,,,,Shipley's Donuts,,,,United States,12 N. Freeway,Houston,TX,77011,,,,,,Business,713-221-1111,,,info@shipleys.com,,,,,,,,,,
