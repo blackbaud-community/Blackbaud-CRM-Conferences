@@ -23,7 +23,7 @@ Ross Thomson - Senior Staff Software Engineer
 Technology should be an enabling force for good. This presentation will take you through the software engineers' journey to free up time for themselves and their peers - so they can focus on their nonprofit's mission for good - by unleashing the power of automation using the Blackbaud UAT Kit. Starting with the 10 thousand-foot view, we'll look at the desire to change outcomes through the effective use of  technology, then move on to evaluate the dividends that automation can replay for the investment. Finally, we'll dive into the operational view of what the kit provides and how you can get up and running against an existing CRM instance in mere minutes!
 
 ### Blackbaud World HQ ###
-Kathyh Wilkes - Senior Event Coordinator
+Kathy Wilkes - Senior Event Coordinator
 
 Kathy will give an overview of Blackbaud's World HQ and cover some fun facts.
 
