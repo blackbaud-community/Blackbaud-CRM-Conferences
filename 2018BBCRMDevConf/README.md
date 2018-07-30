@@ -55,7 +55,7 @@ Virginia Commonwealth University (VCU)
 
 After struggling with the limitations of maintaining dynamic content through Word-merge, we created a donor-centric receipt that serves a dual role of an IRS-compliant gift receipt as well as an initial acknowledgement letter. Through a custom SSRS report and the use of the out-of-the-box receipt processes, we were able to streamline receipt review and proofing by our stewardship office while also allowing for dynamic receipt content through a custom content management interface that serves offline and online gifts. 
 
-### Blackbaud Data Warehouse: Reporting and Analytics (Not Yet Available) ###
+### Blackbaud Data Warehouse: Reporting and Analytics ###
 Tanweer Alam - Interim Director of Advancement Intelligence, University of Illinois Foundation (UIF)
 
 The session will cover the Blackbaud Data Warehouse architecture,reporting, and analytical customizations done at our organization. The session includes:
