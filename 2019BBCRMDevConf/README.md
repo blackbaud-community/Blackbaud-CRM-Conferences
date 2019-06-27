@@ -3,7 +3,7 @@ This section of the Blackbaud-CRM-Conferences repo contains presentation materia
 
 ## Blackbaud Presentations ##
 
-### Conference Welcome (Not Yet Available) ###
+### Conference Welcome ###
 Kevin McDearis, Executive Vice President and Chief Products Officer
 Mary Beth Westmoreland, Chief Technology Officer
 
@@ -62,14 +62,14 @@ Sophie Elefther, Associate Director, Systems Management and Data Analysis, Bosto
 
 By extending the out-of-box Blackbaud CRM Online Transaction Processing (OLTP) and Data Warehouse tables, we built custom reporting tables to standardize all of our outbound reporting data needs. These custom tables have simplified our reporting and are used for many of our integrations with third-party vendors like RNL, EverTrue, and Salesforce® Marketing Cloud. Lastly, using these custom Data Warehouse tables, we built a powerful yet simple and easy-to-use reporting tool (using Qlikview but embedded directly in the Blackbaud CRM application) for easy user access to create lists. This session will include a demonstration of the tool and how we planned and designed it.
 
-### Data Integrities and Data Audits—The Path to the Best Data Possible with Minimal Programming (Not Yet Available) ###
+### Data Integrities and Data Audits—The Path to the Best Data Possible with Minimal Programming ###
 Allen Roth, Director of Business Applications, Jewish Federation of Cleveland 
 
 Data governance and stewardship (i.e., keeping the quality and integrity of your data the best it can be) should be paramount for everyone in every application. In this session, we will review the differences between data rules, data integrities, and data audits. And we’ll show you how to implement an effective, proven solution in Blackbaud CRM with minimal programming. This overview and these practical examples will spark your creativity and help you turn your data quality dreams into reality. 
 
 ## Partner Presentations ##
 
-### Using Cognitive Services and Machine Learning to Empower Your Fundraising (Not Yet Available) ###
+### Using Cognitive Services and Machine Learning to Empower Your Fundraising ###
 Chris Kahrs, Cloud Solutions Architect, US AI/ML Partner Lead, Microsoft 
 David Hendershot, Principal Software Engineer, Blackbaud
 
